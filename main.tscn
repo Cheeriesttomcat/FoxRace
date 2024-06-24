@@ -17,6 +17,5 @@ offset_left = 173.0
 offset_top = 232.0
 offset_right = 303.0
 offset_bottom = 334.0
-tooltip_text = "This is the quit button"
 text = "Quit
 "
