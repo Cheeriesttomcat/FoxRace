@@ -8,16 +8,16 @@ script = ExtResource("1_v1h7i")
 
 [node name="Play" type="Button" parent="."]
 offset_left = 448.0
-offset_top = 128.0
-offset_right = 578.0
-offset_bottom = 230.0
+offset_top = 88.0
+offset_right = 768.0
+offset_bottom = 256.0
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]
 offset_left = 448.0
 offset_top = 320.0
-offset_right = 578.0
-offset_bottom = 422.0
+offset_right = 768.0
+offset_bottom = 512.0
 text = "Quit
 "
 
