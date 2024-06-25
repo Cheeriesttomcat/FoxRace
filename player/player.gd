@@ -15,6 +15,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		anim.play("jump")
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -22,8 +23,12 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		anim.play("run")
+		if velocity.y == 0:
+			anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		if velocity.y == 0:
+			anim.play("idle")
+	if velocity.y > 0:
+			anim.play("fall")
 	move_and_slide()
