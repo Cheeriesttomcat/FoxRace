@@ -1,3 +1,13 @@
+#**************************************************************************************
+#
+#	Basic Background
+#
+#	Author CheeriestTomcat
+#	Created 6/25/24
+#   Last Modified 6/25/24
+#
+#
+#**************************************************************************************
 extends ParallaxBackground
 
 var scrolling_speed = 100
