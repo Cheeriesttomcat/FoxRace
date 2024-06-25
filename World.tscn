@@ -29,6 +29,6 @@ shape = SubResource("RectangleShape2D_t04ci")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 68.0
-offset_top = 134.0
+offset_top = 132.0
 offset_right = 721.0
-offset_bottom = 317.0
+offset_bottom = 315.0
