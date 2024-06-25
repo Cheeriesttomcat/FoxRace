@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q3wks1kx77nc"
-path="res://.godot/imported/tileset.png-4fea223a520acbb596879aa17764ad9f.ctex"
+path="res://.godot/imported/tileset.png-1006f8b55d42e45dc85e96e05a2d00e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-4fea223a520acbb596879aa17764ad9f.ctex"]
+source_file="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-1006f8b55d42e45dc85e96e05a2d00e0.ctex"]
 
 [params]
 
