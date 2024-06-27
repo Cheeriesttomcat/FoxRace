@@ -26,7 +26,7 @@ func _physics_process(delta):
 	var direction = (player.position - self.position).normalized()
 	#Chase the player
 	if chase == true:
-		#get_node("AnimatedSprite2D").play("jump")
+		get_node("AnimatedSprite2D").play("jump")
 		if direction.x < 0:
 			get_node("AnimatedSprite2D").flip_h = false
 			#print("Chase Left")
@@ -36,7 +36,7 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 	else:
 		velocity.x = 0
-		#get_node("AnimatedSprite2D").play("idle")
+		get_node("AnimatedSprite2D").play("idle")
 	#This makes the gravity n stuff work
 	move_and_slide()
 	
