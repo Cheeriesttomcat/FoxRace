@@ -69,11 +69,13 @@ func _on_player_death_body_entered(body):
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death":
-			body.health -= 3
+			Game.PlayerHp -= 3
 			death()
 
 #Do the stuff
 func death():
+		Game.Gold += 5
+		Utils.saveGame()
 		get_node("AnimatedSprite2D").play("death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()

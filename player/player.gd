@@ -18,7 +18,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 # Player health
-var health = 10 
+#var health = 10 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -49,7 +49,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Death Script
-	if health <= 0:
+	if Game.PlayerHp <= 0:
 		queue_free()
 		get_tree().change_scene_to_file("res://main.tscn")
 		
