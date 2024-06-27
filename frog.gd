@@ -63,6 +63,16 @@ func _on_player_detection_body_exited(body):
 #Kill a frog
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
+		death()
+
+#Hurt the player
+func _on_player_collision_body_entered(body):
+	if body.name == "Player":
+		body.health -= 3
+		death()
+
+#Do the stuff
+func death():
 		get_node("AnimatedSprite2D").play("death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
