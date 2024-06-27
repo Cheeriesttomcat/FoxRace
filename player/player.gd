@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 6/25/24
+#   Last Modified 6/27/24
 #
 #
 #**************************************************************************************
@@ -17,7 +17,8 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
-
+# Player health
+var health = 10 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():

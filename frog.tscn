@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dt8by2vmj3fac" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/frog-jump.png" id="4_s8kl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agc5"]
-size = Vector2(25, 14)
+size = Vector2(25, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy1f1"]
 atlas = ExtResource("1_4nq2x")
@@ -81,9 +81,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t3paj")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -133,19 +133,19 @@ animations = [{
 radius = 146.219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug7si"]
-size = Vector2(16, 16)
+size = Vector2(16, 14)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_prgqg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -7)
+position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_2agc5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -12)
 sprite_frames = SubResource("SpriteFrames_8q15f")
-animation = &"idle"
+animation = &"death"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 visible = false
@@ -157,10 +157,9 @@ shape = SubResource("CircleShape2D_et34w")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="squish" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(0, -8)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_ug7si")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_detection_body_entered"]
-[connection signal="body_exited" from="PlayerDeath" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
