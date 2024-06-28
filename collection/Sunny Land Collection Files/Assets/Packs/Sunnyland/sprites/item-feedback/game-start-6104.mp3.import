@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0x42st0osoym"
+path="res://.godot/imported/game-start-6104.mp3-dd59e803d825e2cd506978db8a431308.mp3str"
+
+[deps]
+
+source_file="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/item-feedback/game-start-6104.mp3"
+dest_files=["res://.godot/imported/game-start-6104.mp3-dd59e803d825e2cd506978db8a431308.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

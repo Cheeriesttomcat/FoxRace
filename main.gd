@@ -18,4 +18,7 @@ func _on_quit_pressed():
 
 
 func _on_play_pressed():
+	$ButtonPress.play()
+	#await $ButtonPress.finished
+	await get_tree().create_timer(.5).timeout
 	get_tree().change_scene_to_file("res://World.tscn")
