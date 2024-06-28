@@ -32,6 +32,7 @@ autoplay = true
 
 [node name="ButtonPress" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_lvq0o")
+volume_db = 10.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

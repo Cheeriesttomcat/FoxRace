@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bpwe8n8e5i07h"]
+[gd_scene load_steps=24 format=3 uid="uid://bpwe8n8e5i07h"]
 
 [ext_resource type="Texture2D" uid="uid://cqssvtnye5ww1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/enemy-deadth.png" id="1_4nq2x"]
 [ext_resource type="Texture2D" uid="uid://cfbasema5aqr7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/frog-idle.png" id="1_l6mbh"]
 [ext_resource type="Script" path="res://frog.gd" id="1_prgqg"]
 [ext_resource type="Texture2D" uid="uid://dt8by2vmj3fac" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/frog-jump.png" id="4_s8kl0"]
+[ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="5_2rytk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agc5"]
 size = Vector2(18, 11)
@@ -168,6 +169,9 @@ shape = SubResource("RectangleShape2D_ug7si")
 [node name="ow" type="CollisionShape2D" parent="PlayerCollision"]
 position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_4ie8u")
+
+[node name="owsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_2rytk")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

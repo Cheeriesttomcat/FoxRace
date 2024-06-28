@@ -76,6 +76,7 @@ func _on_player_collision_body_entered(body):
 func death():
 		Game.Gold += 5
 		Utils.saveGame()
+		$owsound.play()
 		get_node("AnimatedSprite2D").play("death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
