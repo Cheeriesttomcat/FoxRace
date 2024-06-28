@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwds1m2pjx5hc"]
+[gd_scene load_steps=12 format=3 uid="uid://cwds1m2pjx5hc"]
 
 [ext_resource type="Texture2D" uid="uid://8v4t5vtwp433" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/cherry/cherry-1.png" id="1_t6l36"]
 [ext_resource type="Texture2D" uid="uid://bp58vybvp4fwc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/cherry/cherry-2.png" id="2_cc5ny"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hw7gw17vlpqw" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/cherry/cherry-5.png" id="5_r2wpk"]
 [ext_resource type="Texture2D" uid="uid://f2xsaififjo6" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/cherry/cherry-6.png" id="6_u2tkk"]
 [ext_resource type="Texture2D" uid="uid://dfpcc32w25wwp" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/cherry/cherry-7.png" id="7_l6py0"]
+[ext_resource type="AudioStream" uid="uid://by33diy1bvt6v" path="res://sfx/power-up-sparkle-1-177983.mp3" id="8_0vtr3"]
 
 [sub_resource type="GDScript" id="GDScript_6f4co"]
 script/source = "#**************************************************************************************
@@ -27,6 +28,7 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.name == \"Player\":
+		$Sparkle.play()
 		Game.Gold += 7
 		var tween = get_tree().create_tween()
 		var tween1 = get_tree().create_tween()
@@ -78,5 +80,8 @@ position = Vector2(2, 1)
 sprite_frames = SubResource("SpriteFrames_kj53v")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Sparkle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_0vtr3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
