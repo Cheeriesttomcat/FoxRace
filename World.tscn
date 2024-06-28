@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=13 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
 [ext_resource type="Script" path="res://bg.gd" id="2_623jc"]
 [ext_resource type="Texture2D" uid="uid://bvlxs31gcmi1e" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="3_jf6it"]
 [ext_resource type="PackedScene" uid="uid://bpwe8n8e5i07h" path="res://frog.tscn" id="5_umvxs"]
+[ext_resource type="AudioStream" uid="uid://bcacuob3ysppk" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/happywalking.ogg" id="6_dl73s"]
+[ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="6_qsiyt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -478,7 +480,7 @@ func _on_timer_timeout():
 	add_child(cherryTmp)
 "
 
-[node name="World" type="Node2D"]
+[node name="World1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2, 6)
@@ -546,5 +548,13 @@ script = SubResource("GDScript_lsnjl")
 script = SubResource("GDScript_pt0b7")
 
 [node name="Timer" type="Timer" parent="Collectables"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_dl73s")
+volume_db = 10.0
+autoplay = true
+
+[node name="Cherry" parent="." instance=ExtResource("6_qsiyt")]
+position = Vector2(249, 287)
 
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]

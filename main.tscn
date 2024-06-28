@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7d50kppvpwh0"]
+[gd_scene load_steps=4 format=3 uid="uid://b7d50kppvpwh0"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_v1h7i"]
 [ext_resource type="PackedScene" uid="uid://bqnjbq50ygl65" path="res://bg.tscn" id="2_h6vxy"]
+[ext_resource type="AudioStream" uid="uid://cwmavg7t27ymq" path="res://music/Music by Pascal Belisle/platformer_level03_loop.ogg" id="3_jvyn1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_v1h7i")
@@ -22,6 +23,11 @@ text = "Quit
 "
 
 [node name="BG" parent="." instance=ExtResource("2_h6vxy")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jvyn1")
+volume_db = 10.0
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
