@@ -1,9 +1,9 @@
 #**************************************************************************************
 #
-#	Frog Stuff
+#	Possum Stuff
 #
 #	Author CheeriestTomcat
-#	Created 6/25/24
+#	Created 7/1/24
 #   Last Modified 7/1/24
 #
 #
@@ -12,13 +12,13 @@ extends CharacterBody2D
 
 var player
 
-#This implements gravity for frog
+#This implements gravity for possum
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #This is the chase variable
 var chase = false
-#Set frog speed
-var SPEED = 100
-var HOPS = -300
+#Set possum speed
+var SPEED = 300
+
 #reset idle
 func _ready():
 	get_node("AnimatedSprite2D").play("idle")
@@ -31,43 +31,23 @@ func _physics_process(delta):
 	var direction = (player.position - self.position).normalized()
 	#Chase the player
 	if chase == true:
-		if $HopTime.is_stopped() == true:
-			$HopTime.one_shot = true
-			$HopTime.start(3.0)
-			if get_node("AnimatedSprite2D").animation != "death":
-				if self.is_on_floor():
-					velocity.y = HOPS
-					get_node("AnimatedSprite2D").play("jump")
-					if direction.x < 0:
-						get_node("AnimatedSprite2D").flip_h = false
-						#print("Chase Left")
-					else:
-						get_node("AnimatedSprite2D").flip_h = true
-						#print("Chase Right")
-					velocity.x = SPEED * direction.x
-			else:
-				velocity.x = 0
+		if get_node("AnimatedSprite2D").animation != "death":
+				get_node("AnimatedSprite2D").play("run")
+				if direction.x < 0:
+					get_node("AnimatedSprite2D").flip_h = false
+					#print("Chase Left")
+				else:
+					get_node("AnimatedSprite2D").flip_h = true
+					#print("Chase Right")
+				velocity.x = SPEED * direction.x
 		else:
-			if self.is_on_floor():
-				#print("On the ground")
-				if get_node("AnimatedSprite2D").animation != "death":
-					get_node("AnimatedSprite2D").play("idle")
-				velocity.x = 0
-			else:
-				if velocity.y > 0:
-					if get_node("AnimatedSprite2D").animation != "death":
-						get_node("AnimatedSprite2D").play("fall")
+			velocity.x = 0
 	else:
 		if get_node("AnimatedSprite2D").animation != "death":
 			get_node("AnimatedSprite2D").play("idle")
 		velocity.x = 0
 	#This makes the gravity n stuff work
 	move_and_slide()
-	#if $HopTime.is_stopped() == true:
-	#	print("Stopped")
-	#else:
-	#	print("Not Stopped")
-	#	print(str($HopTime.get_time_left()))
 		
 	
 #This is the character detection

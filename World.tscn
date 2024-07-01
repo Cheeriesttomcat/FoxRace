@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=15 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
 [ext_resource type="Script" path="res://bg.gd" id="2_623jc"]
 [ext_resource type="Texture2D" uid="uid://bvlxs31gcmi1e" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="3_jf6it"]
 [ext_resource type="PackedScene" uid="uid://bpwe8n8e5i07h" path="res://frog.tscn" id="5_umvxs"]
+[ext_resource type="Script" path="res://possum.gd" id="6_5qdxo"]
 [ext_resource type="AudioStream" uid="uid://bcacuob3ysppk" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/happywalking.ogg" id="6_dl73s"]
 [ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="6_qsiyt"]
+[ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://possum.tscn" id="7_2sol7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -508,19 +510,26 @@ position = Vector2(85, 210)
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(316, 289)
+position = Vector2(909, 314)
 
 [node name="Frog2" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(580, 224)
+position = Vector2(967, 357)
 
 [node name="Frog3" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(406, 373)
+position = Vector2(1061, 325)
 
 [node name="Frog4" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(693, 300)
+position = Vector2(839, 337)
 
 [node name="Frog5" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(515, 301)
+position = Vector2(1005, 311)
+script = ExtResource("6_5qdxo")
+
+[node name="Possum" parent="Mobs" instance=ExtResource("7_2sol7")]
+position = Vector2(299, 249)
+
+[node name="Possum2" parent="Mobs" instance=ExtResource("7_2sol7")]
+position = Vector2(640, 320)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

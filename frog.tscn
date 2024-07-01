@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="5_2rytk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agc5"]
-size = Vector2(18, 11)
+size = Vector2(20, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy1f1"]
 atlas = ExtResource("1_4nq2x")
@@ -132,7 +132,7 @@ radius = 146.219
 size = Vector2(16, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ie8u"]
-size = Vector2(25, 12)
+size = Vector2(26.5, 12)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_prgqg")
@@ -147,10 +147,8 @@ sprite_frames = SubResource("SpriteFrames_8q15f")
 animation = &"jump"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
-visible = false
 
 [node name="radius" type="CollisionShape2D" parent="PlayerDetection"]
-visible = false
 shape = SubResource("CircleShape2D_et34w")
 
 [node name="PlayerDeath" type="Area2D" parent="."]
