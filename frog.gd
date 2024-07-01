@@ -32,8 +32,8 @@ func _physics_process(delta):
 	#Chase the player
 	if chase == true:
 		if get_node("AnimatedSprite2D").animation != "death":
-			if is_on_floor():
-				velocity.y = HOPS	
+			if self.is_on_floor():
+				velocity.y = HOPS
 				get_node("AnimatedSprite2D").play("jump")
 				if direction.x < 0:
 					get_node("AnimatedSprite2D").flip_h = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c1i0ghokrc07g"]
+[gd_scene load_steps=25 format=3 uid="uid://c1i0ghokrc07g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gjget"]
 [ext_resource type="Texture2D" uid="uid://cjcg0bw77uhb7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="2_dfm8r"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://f4aw7ggioujb" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/run/player-run-6.png" id="13_omt65"]
 [ext_resource type="Texture2D" uid="uid://dtp2f7oneevbi" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png" id="14_5xhif"]
 [ext_resource type="Texture2D" uid="uid://d11ungdrplvg0" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png" id="15_q7xsh"]
+[ext_resource type="AudioStream" uid="uid://brwqck66ehs38" path="res://sfx/toy-button-105724.mp3" id="16_yd4yr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ebmi"]
 size = Vector2(19, 21)
@@ -254,3 +255,6 @@ autoplay = "idle"
 position = Vector2(1, -4)
 sprite_frames = SubResource("SpriteFrames_pmoyv")
 animation = &"Idle"
+
+[node name="Boing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_yd4yr")
