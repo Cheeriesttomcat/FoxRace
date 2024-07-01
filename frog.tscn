@@ -172,6 +172,9 @@ shape = SubResource("RectangleShape2D_4ie8u")
 
 [node name="owsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_2rytk")
+volume_db = -5.0
+
+[node name="HopTime" type="Timer" parent="."]
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

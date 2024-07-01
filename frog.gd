@@ -17,7 +17,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #This is the chase variable
 var chase = false
 #Set frog speed
-var SPEED = 50
+var SPEED = 100
+var HOPS = -300
 #reset idle
 func _ready():
 	get_node("AnimatedSprite2D").play("idle")
@@ -31,14 +32,16 @@ func _physics_process(delta):
 	#Chase the player
 	if chase == true:
 		if get_node("AnimatedSprite2D").animation != "death":
-			get_node("AnimatedSprite2D").play("jump")
-			if direction.x < 0:
-				get_node("AnimatedSprite2D").flip_h = false
-				#print("Chase Left")
-			else:
-				get_node("AnimatedSprite2D").flip_h = true
-				#print("Chase Right")
-			velocity.x = direction.x * SPEED
+			if is_on_floor():
+				velocity.y = HOPS	
+				get_node("AnimatedSprite2D").play("jump")
+				if direction.x < 0:
+					get_node("AnimatedSprite2D").flip_h = false
+					#print("Chase Left")
+				else:
+					get_node("AnimatedSprite2D").flip_h = true
+					#print("Chase Right")
+				velocity.x = direction.x * SPEED
 		else:
 			velocity.x = 0
 	else:
@@ -63,6 +66,7 @@ func _on_player_detection_body_exited(body):
 #Kill a frog
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
+		body.velocity.y = -400
 		death()
 
 #Hurt the player
