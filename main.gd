@@ -10,7 +10,7 @@
 #**************************************************************************************
 extends Node2D
 func _ready():
-	#Utils.saveGame()
+	Utils.saveGame()
 	Utils.loadGame()
 
 func _on_quit_pressed():
@@ -19,7 +19,6 @@ func _on_quit_pressed():
 
 func _on_play_pressed():
 	$ButtonPress.play()
-	Utils.loadGame()
 	#await $ButtonPress.finished
 	await get_tree().create_timer(.5).timeout
 	get_tree().change_scene_to_file("res://World.tscn")
