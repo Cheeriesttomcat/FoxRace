@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 6/27/24
+#   Last Modified 7/2/24
 #
 #
 #**************************************************************************************
@@ -27,7 +27,8 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		anim.play("jump")
+		if get_node("AnimatedSprite2D").animation != "hurt":
+			anim.play("jump")
 		velocity.y = JUMP_VELOCITY
 		$Boing.play()
 	# Get the input direction and handle the movement/deceleration.
@@ -40,13 +41,17 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
-			anim.play("run")
+			if get_node("AnimatedSprite2D").animation != "hurt":
+				anim.play("run")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if get_node("AnimatedSprite2D").animation != "hurt":
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 		if velocity.y == 0:
-			anim.play("idle")
+			if get_node("AnimatedSprite2D").animation != "hurt":
+				anim.play("idle")
 	if velocity.y > 0:
-			anim.play("fall")
+	#	if get_node("AnimatedSprite2D").animation != "hurt":
+		anim.play("fall")
 	move_and_slide()
 	
 	#Death Script

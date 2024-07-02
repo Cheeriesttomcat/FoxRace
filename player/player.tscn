@@ -227,8 +227,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_q7xsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5xhif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q7xsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5xhif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q7xsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5xhif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q7xsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5xhif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q7xsh")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
 "speed": 5.0
 }]

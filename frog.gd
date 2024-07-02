@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/25/24
-#   Last Modified 7/1/24
+#   Last Modified 7/2/24
 #
 #
 #**************************************************************************************
@@ -18,7 +18,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var chase = false
 #Set frog speed
 var SPEED = 100
+#Frog Hop Height
 var HOPS = -300
+#Bounce off of frog
+var BOUNCE = -400
+#Player impact rate
+var OWIE = 300
 #reset idle
 func _ready():
 	get_node("AnimatedSprite2D").play("idle")
@@ -85,7 +90,7 @@ func _on_player_detection_body_exited(body):
 #Kill a frog
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
-		body.velocity.y = -400
+		body.velocity.y = BOUNCE
 		Game.Gold += 5
 		death()
 
@@ -94,6 +99,12 @@ func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death":
 			Game.PlayerHp -= 3
+			if (player.position.x - self.position.x) < 0:
+				body.velocity.x = -1.0 * OWIE
+			else:
+				body.velocity.x = OWIE
+			body.velocity.y = -1 * OWIE
+			body.get_node("AnimatedSprite2D").play("hurt")
 			death()
 
 #Do the stuff

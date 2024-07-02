@@ -18,6 +18,8 @@ var toggle = false
 var SPEED = 75
 #Set UP/Down
 var TIMER = 2.0
+#Set hurt range
+var OWIE = 300
 
 
 func _ready():
@@ -25,7 +27,7 @@ func _ready():
 	$Switch.one_shot = true
 	$Switch.start(TIMER)
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	#This finds the player
 	player = get_node("../../Player/Player")
 	var direction = (player.position - self.position).normalized()
@@ -72,6 +74,12 @@ func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death":
 			Game.PlayerHp -= 3
+			if (player.position.x - self.position.x) < 0:
+				body.velocity.x = -1.0 * OWIE
+			else:
+				body.velocity.x = OWIE
+			body.velocity.y = -1 * OWIE
+			body.get_node("AnimatedSprite2D").play("hurt")
 			death()
 
 #Do the stuff
