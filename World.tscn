@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=16 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://bcacuob3ysppk" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/happywalking.ogg" id="6_dl73s"]
 [ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="6_qsiyt"]
 [ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://possum.tscn" id="7_2sol7"]
+[ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://eagle.tscn" id="10_ffhre"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -526,7 +527,7 @@ position = Vector2(1005, 311)
 script = ExtResource("6_5qdxo")
 
 [node name="Possum" parent="Mobs" instance=ExtResource("7_2sol7")]
-position = Vector2(299, 249)
+position = Vector2(741, 141)
 
 [node name="Possum2" parent="Mobs" instance=ExtResource("7_2sol7")]
 position = Vector2(640, 320)
@@ -565,5 +566,8 @@ autoplay = true
 
 [node name="Cherry" parent="." instance=ExtResource("6_qsiyt")]
 position = Vector2(249, 287)
+
+[node name="Eagle" parent="." instance=ExtResource("10_ffhre")]
+position = Vector2(198, 338)
 
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]

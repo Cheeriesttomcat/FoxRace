@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="5_2rytk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agc5"]
-size = Vector2(20, 13)
+size = Vector2(27, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy1f1"]
 atlas = ExtResource("1_4nq2x")
@@ -129,10 +129,10 @@ animations = [{
 radius = 146.219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug7si"]
-size = Vector2(16, 14)
+size = Vector2(22, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ie8u"]
-size = Vector2(26.5, 12)
+size = Vector2(26.5, 16)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_prgqg")
