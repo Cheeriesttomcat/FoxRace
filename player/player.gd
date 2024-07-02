@@ -27,8 +27,8 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		if get_node("AnimatedSprite2D").animation != "hurt":
-			anim.play("jump")
+		#get_node("AnimatedSprite2D").animation != "hurt":
+		anim.play("jump")
 		velocity.y = JUMP_VELOCITY
 		$Boing.play()
 	# Get the input direction and handle the movement/deceleration.
@@ -39,9 +39,9 @@ func _physics_process(delta):
 	elif direction == 1:
 		get_node("AnimatedSprite2D").flip_h = false
 	if direction:
-		velocity.x = direction * SPEED
-		if velocity.y == 0:
-			if get_node("AnimatedSprite2D").animation != "hurt":
+		if get_node("AnimatedSprite2D").animation != "hurt":
+			velocity.x = direction * SPEED
+			if velocity.y == 0:
 				anim.play("run")
 	else:
 		if get_node("AnimatedSprite2D").animation != "hurt":
@@ -50,7 +50,7 @@ func _physics_process(delta):
 			if get_node("AnimatedSprite2D").animation != "hurt":
 				anim.play("idle")
 	if velocity.y > 0:
-	#	if get_node("AnimatedSprite2D").animation != "hurt":
+	# get_node("AnimatedSprite2D").animation != "hurt":
 		anim.play("fall")
 	move_and_slide()
 	
