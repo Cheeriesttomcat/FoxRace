@@ -532,6 +532,9 @@ position = Vector2(741, 141)
 [node name="Possum2" parent="Mobs" instance=ExtResource("7_2sol7")]
 position = Vector2(640, 320)
 
+[node name="Eagle" parent="Mobs" instance=ExtResource("10_ffhre")]
+position = Vector2(198, 338)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Hp" type="Label" parent="UI"]
@@ -566,8 +569,5 @@ autoplay = true
 
 [node name="Cherry" parent="." instance=ExtResource("6_qsiyt")]
 position = Vector2(249, 287)
-
-[node name="Eagle" parent="." instance=ExtResource("10_ffhre")]
-position = Vector2(198, 338)
 
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
