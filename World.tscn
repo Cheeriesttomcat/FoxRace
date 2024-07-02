@@ -528,7 +528,7 @@ position = Vector2(741, 141)
 position = Vector2(640, 320)
 
 [node name="Eagle" parent="Mobs" instance=ExtResource("10_ffhre")]
-position = Vector2(183, 334)
+position = Vector2(217, 299)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

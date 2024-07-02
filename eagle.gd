@@ -15,7 +15,7 @@ var player
 #This rotates the motion
 var toggle = false
 #Set eagle speed
-var SPEED = 50
+var SPEED = 75
 #Set UP/Down
 var TIMER = 2.0
 
@@ -45,7 +45,7 @@ func _physics_process(delta):
 			else:
 				velocity.y = SPEED
 		else:
-			if $Switch.is_stopped():
+			if $Switch.is_stopped() or self.is_on_ceiling():
 				toggle = true
 				velocity.y = SPEED
 				$Switch.start(TIMER)
@@ -60,10 +60,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-#Kill a frog
+#Kill an eagle
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		body.velocity.y = -400
+		Game.Gold += 5
 		death()
 
 #Hurt the player
@@ -75,7 +76,6 @@ func _on_player_collision_body_entered(body):
 
 #Do the stuff
 func death():
-		Game.Gold += 5
 		Utils.saveGame()
 		$owsound.play()
 		get_node("AnimatedSprite2D").play("death")
