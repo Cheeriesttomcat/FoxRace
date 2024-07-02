@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="5_2rytk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agc5"]
-size = Vector2(27, 22)
+size = Vector2(22, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy1f1"]
 atlas = ExtResource("1_4nq2x")
@@ -129,24 +129,25 @@ animations = [{
 radius = 146.219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug7si"]
-size = Vector2(22, 11.5)
+size = Vector2(17, 17.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ie8u"]
-size = Vector2(26.5, 16)
+size = Vector2(24.375, 12)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_prgqg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6.5)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_2agc5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -12)
 sprite_frames = SubResource("SpriteFrames_8q15f")
-animation = &"jump"
+animation = &"idle"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
+visible = false
 
 [node name="radius" type="CollisionShape2D" parent="PlayerDetection"]
 shape = SubResource("CircleShape2D_et34w")
@@ -154,13 +155,13 @@ shape = SubResource("CircleShape2D_et34w")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="squish" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(0, -7)
+position = Vector2(-0.5, -10.125)
 shape = SubResource("RectangleShape2D_ug7si")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="ow" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(0.5, -6)
+position = Vector2(0.1875, -6)
 shape = SubResource("RectangleShape2D_4ie8u")
 
 [node name="owsound" type="AudioStreamPlayer2D" parent="."]

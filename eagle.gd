@@ -1,6 +1,7 @@
 #**************************************************************************************
 #
 #	Eagle Stuff
+
 #	Author CheeriestTomcat
 #	Created 7/2/24
 #   Last Modified 7/2/24
@@ -11,16 +12,18 @@ extends CharacterBody2D
 
 var player
 
-#This implements gravity for frog
-#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-#This is the chase variable
-#var chase = false
-#Set frog speed
-var SPEED = 100
-#var HOPS = -300
-#reset idle
+#This rotates the motion
+var toggle = false
+#Set eagle speed
+var SPEED = 50
+#Set UP/Down
+var TIMER = 2.0
+
+
 func _ready():
 	get_node("AnimatedSprite2D").play("default")
+	$Switch.one_shot = true
+	$Switch.start(TIMER)
 	
 func _physics_process(delta):
 	#This finds the player
@@ -32,13 +35,24 @@ func _physics_process(delta):
 	else:
 		get_node("AnimatedSprite2D").flip_h = true
 		#print("Chase Right")
-
+	#Go Up and down
 	if get_node("AnimatedSprite2D").animation != "death":
-		if self.is_on_floor():
-			get_node("AnimatedSprite2D").play("jump")
-			velocity.x = SPEED * direction.x
+		if toggle == true:
+			if self.is_on_floor() or $Switch.is_stopped():
+				toggle = false
+				velocity.y = -1 * SPEED
+				$Switch.start(TIMER)
+			else:
+				velocity.y = SPEED
+		else:
+			if $Switch.is_stopped():
+				toggle = true
+				velocity.y = SPEED
+				$Switch.start(TIMER)
+			else:
+				velocity.y = -1 * SPEED
 	else:
-		velocity.x = 0
+		velocity.y = 0
 
 
 
