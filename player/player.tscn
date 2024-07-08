@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c1i0ghokrc07g"]
+[gd_scene load_steps=26 format=3 uid="uid://c1i0ghokrc07g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gjget"]
 [ext_resource type="Texture2D" uid="uid://cjcg0bw77uhb7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="2_dfm8r"]
@@ -159,10 +159,40 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 5]
 }
 
+[sub_resource type="Animation" id="Animation_vev4u"]
+resource_name = "hurt"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hurt"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_820q6"]
 _data = {
 "RESET": SubResource("Animation_miuov"),
 "fall": SubResource("Animation_g0yg7"),
+"hurt": SubResource("Animation_vev4u"),
 "idle": SubResource("Animation_43dhr"),
 "jump": SubResource("Animation_kf65b"),
 "run": SubResource("Animation_4grqe")
@@ -227,30 +257,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_q7xsh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_5xhif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_q7xsh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_5xhif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_q7xsh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_5xhif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_q7xsh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_5xhif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_q7xsh")
 }],
 "loop": false,
 "name": &"hurt",
@@ -282,3 +288,5 @@ animation = &"Idle"
 
 [node name="Boing" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_yd4yr")
+
+[node name="PainTimer" type="Timer" parent="."]

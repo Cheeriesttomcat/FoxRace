@@ -4,7 +4,7 @@
 
 #	Author CheeriestTomcat
 #	Created 7/2/24
-#   Last Modified 7/2/24
+#   Last Modified 7/8/24
 #
 #
 #**************************************************************************************
@@ -79,8 +79,9 @@ func _on_player_collision_body_entered(body):
 			else:
 				body.velocity.x = OWIE
 			body.velocity.y = -1 * OWIE
-			body.get_node("AnimatedSprite2D").play("hurt")
-			body.get_node("AnimatedSprite2D").set_frame(0)
+			body.pain = true
+			#body.get_node("AnimatedSprite2D").play("hurt")
+			#body.get_node("AnimatedSprite2D").set_frame(0)
 			death()
 
 #Do the stuff
