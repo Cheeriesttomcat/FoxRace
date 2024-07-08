@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=16 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="6_qsiyt"]
 [ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://possum.tscn" id="7_2sol7"]
 [ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://eagle.tscn" id="10_ffhre"]
+[ext_resource type="PackedScene" uid="uid://b6twcvl4ubne0" path="res://Collectables/diamond.tscn" id="10_tagvv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -563,6 +564,9 @@ volume_db = -7.0
 autoplay = true
 
 [node name="Cherry" parent="." instance=ExtResource("6_qsiyt")]
-position = Vector2(249, 287)
+position = Vector2(327, 271)
+
+[node name="Diamond" parent="." instance=ExtResource("10_tagvv")]
+position = Vector2(386, 317)
 
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
