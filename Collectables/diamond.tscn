@@ -51,5 +51,6 @@ frame_progress = 0.340977
 
 [node name="Sparkle" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_trgvh")
+volume_db = -10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
