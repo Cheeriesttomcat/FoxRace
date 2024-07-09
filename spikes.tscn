@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://41cla48c8jhm"]
+
+[ext_resource type="Script" path="res://spikes.gd" id="1_u450u"]
+[ext_resource type="Texture2D" uid="uid://b2v2d3w6i1ji1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/spikes.png" id="1_vucjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h88l6"]
+size = Vector2(15, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wroh"]
+size = Vector2(13, 5)
+
+[node name="Spikes" type="StaticBody2D"]
+script = ExtResource("1_u450u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-3.5, 8.5)
+shape = SubResource("RectangleShape2D_h88l6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.5, 6)
+texture = ExtResource("1_vucjc")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ow" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(-3.5, 4.5)
+shape = SubResource("RectangleShape2D_6wroh")
+
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
