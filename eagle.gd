@@ -4,7 +4,7 @@
 
 #	Author CheeriestTomcat
 #	Created 7/2/24
-#   Last Modified 7/8/24
+#   Last Modified 7/9/24
 #
 #
 #**************************************************************************************
@@ -18,6 +18,12 @@ var toggle = false
 var SPEED = 75
 #Set UP/Down
 var TIMER = 2.0
+#Bounce off of Eagle
+var BOUNCE = -400
+#Point values
+var POINTS = 5
+#Damage Done
+var LOSS = 3
 
 
 func _ready():
@@ -63,15 +69,15 @@ func _physics_process(_delta):
 #Kill an eagle
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
-		body.velocity.y = -400
-		Game.Gold += 5
+		body.velocity.y = BOUNCE
+		Game.Gold += POINTS
 		death()
 
 #Hurt the player
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death" and (body.get_node("AnimatedSprite2D").animation != "hurt"):
-			Game.PlayerHp -= 3
+			Game.PlayerHp -= LOSS
 			if (player.position.x - self.position.x) < 0:
 				body.velocity.x = -1.0 * body.OWW
 			else:

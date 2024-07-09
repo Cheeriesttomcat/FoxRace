@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/25/24
-#   Last Modified 7/8/24
+#   Last Modified 7/9/24
 #
 #
 #**************************************************************************************
@@ -22,8 +22,11 @@ var SPEED = 100
 var HOPS = -300
 #Bounce off of frog
 var BOUNCE = -400
-#Player impact rate
-var OWIE = 300
+#Amount of points gained
+var POINTS = 5
+#Damage Done
+var LOSS = 3
+
 #reset idle
 func _ready():
 	get_node("AnimatedSprite2D").play("idle")
@@ -91,14 +94,14 @@ func _on_player_detection_body_exited(body):
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		body.velocity.y = BOUNCE
-		Game.Gold += 5
+		Game.Gold += POINTS
 		death()
 
 #Hurt the player
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death" and (body.get_node("AnimatedSprite2D").animation != "hurt"):
-			Game.PlayerHp -= 3
+			Game.PlayerHp -= LOSS
 			if (player.position.x - self.position.x) < 0:
 				body.velocity.x = -1.0 * body.OWW
 			else:
