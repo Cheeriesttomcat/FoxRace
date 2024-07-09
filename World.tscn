@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=18 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
 [ext_resource type="Script" path="res://bg.gd" id="2_623jc"]
 [ext_resource type="Texture2D" uid="uid://bvlxs31gcmi1e" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="3_jf6it"]
+[ext_resource type="Script" path="res://CloudLayer.gd" id="3_t8act"]
 [ext_resource type="Texture2D" uid="uid://bc3buykebs0x1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/middle.png" id="4_cuv2j"]
 [ext_resource type="PackedScene" uid="uid://bpwe8n8e5i07h" path="res://frog.tscn" id="5_umvxs"]
 [ext_resource type="AudioStream" uid="uid://bcacuob3ysppk" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/happywalking.ogg" id="6_dl73s"]
@@ -496,20 +497,55 @@ layer_0/tile_data = PackedInt32Array(1507332, 196608, 1, 1572868, 196608, 3, 163
 layer = -101
 script = ExtResource("2_623jc")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+[node name="CloudLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(1152, 0)
+script = ExtResource("3_t8act")
 
-[node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
+[node name="Back" type="Sprite2D" parent="BG/CloudLayer"]
 position = Vector2(576, 320)
 scale = Vector2(3, 2.66667)
 texture = ExtResource("3_jf6it")
 metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
-motion_mirroring = Vector2(175, 0)
+[node name="HillLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1584, 0)
 
-[node name="Middle" type="Sprite2D" parent="BG/ParallaxLayer2"]
-position = Vector2(99, 407)
+[node name="Middle" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(88, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle2" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(264, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle3" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(440, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle4" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(616, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle5" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(792, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle6" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(968, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle7" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(1144, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle8" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(1320, 414)
+texture = ExtResource("4_cuv2j")
+
+[node name="Middle9" type="Sprite2D" parent="BG/HillLayer"]
+position = Vector2(1496, 414)
 texture = ExtResource("4_cuv2j")
 
 [node name="Player" type="Node2D" parent="."]
@@ -526,7 +562,7 @@ position = Vector2(909, 314)
 position = Vector2(967, 357)
 
 [node name="Frog3" parent="Mobs" instance=ExtResource("5_umvxs")]
-position = Vector2(1061, 325)
+position = Vector2(1032, 264)
 
 [node name="Frog4" parent="Mobs" instance=ExtResource("5_umvxs")]
 position = Vector2(839, 337)
@@ -535,10 +571,10 @@ position = Vector2(839, 337)
 position = Vector2(741, 141)
 
 [node name="Possum2" parent="Mobs" instance=ExtResource("7_2sol7")]
-position = Vector2(640, 320)
+position = Vector2(430, 169)
 
 [node name="Eagle" parent="Mobs" instance=ExtResource("10_ffhre")]
-position = Vector2(217, 299)
+position = Vector2(198, 268)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
