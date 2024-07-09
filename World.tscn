@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://CloudLayer.gd" id="3_t8act"]
 [ext_resource type="Texture2D" uid="uid://bc3buykebs0x1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/middle.png" id="4_cuv2j"]
 [ext_resource type="AudioStream" uid="uid://bcacuob3ysppk" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/happywalking.ogg" id="6_dl73s"]
-[ext_resource type="PackedScene" uid="uid://41cla48c8jhm" path="res://spikes.tscn" id="7_r0ael"]
+[ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://possum.tscn" id="7_2sol7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -551,8 +551,8 @@ position = Vector2(85, 210)
 
 [node name="Mobs" type="Node2D" parent="."]
 
-[node name="Spikes" parent="Mobs" instance=ExtResource("7_r0ael")]
-position = Vector2(264, 363)
+[node name="Possum" parent="Mobs" instance=ExtResource("7_2sol7")]
+position = Vector2(288, 277)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

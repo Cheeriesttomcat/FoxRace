@@ -53,7 +53,8 @@ func _physics_process(delta):
 			get_node("AnimatedSprite2D").play("idle")
 		velocity.x = 0
 	#This makes the gravity n stuff work
-	move_and_slide()
+	if get_node("AnimatedSprite2D").animation != "death":
+		move_and_slide()
 		
 	
 #This is the character detection

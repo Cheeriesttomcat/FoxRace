@@ -63,7 +63,8 @@ func _physics_process(_delta):
 
 
 	#This makes the gravity n stuff work
-	move_and_slide()
+	if get_node("AnimatedSprite2D").animation != "death":
+		move_and_slide()
 
 
 #Kill an eagle
