@@ -129,7 +129,7 @@ animations = [{
 radius = 146.219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug7si"]
-size = Vector2(17, 17.75)
+size = Vector2(22, 17.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ie8u"]
 size = Vector2(24.375, 12)
@@ -138,6 +138,7 @@ size = Vector2(24.375, 12)
 script = ExtResource("1_prgqg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_2agc5")
 
@@ -155,7 +156,7 @@ shape = SubResource("CircleShape2D_et34w")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="squish" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(-0.5, -10.125)
+position = Vector2(0, -10.125)
 shape = SubResource("RectangleShape2D_ug7si")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
