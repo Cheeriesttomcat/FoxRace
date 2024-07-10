@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=19 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://41cla48c8jhm" path="res://spikes.tscn" id="10_e2itu"]
 [ext_resource type="Texture2D" uid="uid://dwt0o5b43bdnc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/bush.png" id="10_n4co8"]
 [ext_resource type="Texture2D" uid="uid://c5rvd6lnhvlw8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/palm.png" id="11_xrl5m"]
+[ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://eagle.tscn" id="13_t2f7x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -696,3 +697,6 @@ position = Vector2(578, 255)
 stream = ExtResource("6_dl73s")
 volume_db = -7.0
 autoplay = true
+
+[node name="Eagle" parent="." instance=ExtResource("13_t2f7x")]
+position = Vector2(1355, 267)
