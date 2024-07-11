@@ -1,10 +1,10 @@
 extends StaticBody2D
 #**************************************************************************************
 #
-#	Spikes -- OW
+#	Spikes with skull-- OW
 #	Author CheeriestTomcat
-#	Created 7/9/24
-#   Last Modified 7/9/24
+#	Created 7/10/24
+#   Last Modified 7/10/24
 #
 #
 #**************************************************************************************
