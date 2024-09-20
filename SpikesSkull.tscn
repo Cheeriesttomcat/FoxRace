@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://i1csi006i85d"]
+[gd_scene load_steps=5 format=3 uid="uid://i1csi006i85d"]
 
+[ext_resource type="Script" path="res://SpikesSkull.gd" id="1_7dt3d"]
 [ext_resource type="Texture2D" uid="uid://dfw61eaxl0af6" path="res://spike-skull.png" id="1_fr2q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfup1"]
@@ -9,6 +10,7 @@ size = Vector2(16, 6)
 size = Vector2(12, 7)
 
 [node name="SpikesSkull" type="StaticBody2D"]
+script = ExtResource("1_7dt3d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fr2q5")
