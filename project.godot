@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Game="*res://Global/game.gd"
 Utils="*res://Global/utils.gd"
 
+[layer_names]
+
+2d_physics/layer_7="Ladder"
+
 [rendering]
 
 renderer/rendering_method="mobile"
