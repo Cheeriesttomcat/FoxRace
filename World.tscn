@@ -657,13 +657,16 @@ texture = ExtResource("11_xrl5m")
 visibility_layer = 513
 
 [node name="SpikesSkull" parent="Mobs" instance=ExtResource("13_o150a")]
-position = Vector2(293, 362)
+position = Vector2(263, 369)
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_umvxs")]
 position = Vector2(785, 338)
 
 [node name="Spikes" parent="Mobs" instance=ExtResource("10_e2itu")]
 position = Vector2(1241, 640)
+
+[node name="Spikes2" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(173, 363)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

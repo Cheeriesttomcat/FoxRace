@@ -7,7 +7,7 @@
 size = Vector2(16, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_885gn"]
-size = Vector2(12, 7)
+size = Vector2(14, 6)
 
 [node name="SpikesSkull" type="StaticBody2D"]
 script = ExtResource("1_7dt3d")
@@ -21,6 +21,8 @@ shape = SubResource("RectangleShape2D_vfup1")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(0, -1.5)
+[node name="ow" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_885gn")
+
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
