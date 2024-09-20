@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c1i0ghokrc07g"]
+[gd_scene load_steps=29 format=3 uid="uid://c1i0ghokrc07g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gjget"]
 [ext_resource type="Texture2D" uid="uid://cjcg0bw77uhb7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="2_dfm8r"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://cn1ufy7pfythg" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/run/player-run-4.png" id="11_f27p8"]
 [ext_resource type="Texture2D" uid="uid://cijobkc7jtqa8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/run/player-run-5.png" id="12_288xn"]
 [ext_resource type="Texture2D" uid="uid://f4aw7ggioujb" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/run/player-run-6.png" id="13_omt65"]
+[ext_resource type="Texture2D" uid="uid://c1xk1h27qrtnb" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/crouch/player-crouch-1.png" id="14_2f0fl"]
 [ext_resource type="Texture2D" uid="uid://dtp2f7oneevbi" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png" id="14_5xhif"]
+[ext_resource type="Texture2D" uid="uid://bokgrlkxe5mbj" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/crouch/player-crouch-2.png" id="15_npykj"]
 [ext_resource type="Texture2D" uid="uid://d11ungdrplvg0" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png" id="15_q7xsh"]
 [ext_resource type="AudioStream" uid="uid://brwqck66ehs38" path="res://sfx/toy-button-105724.mp3" id="16_yd4yr"]
 
@@ -188,9 +190,39 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 5]
 }
 
+[sub_resource type="Animation" id="Animation_wxjoo"]
+resource_name = "crouch"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"crouch"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_820q6"]
 _data = {
 "RESET": SubResource("Animation_miuov"),
+"crouch": SubResource("Animation_wxjoo"),
 "fall": SubResource("Animation_g0yg7"),
 "hurt": SubResource("Animation_vev4u"),
 "idle": SubResource("Animation_43dhr"),
@@ -253,6 +285,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("14_2f0fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_npykj")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("14_5xhif")
 }, {
 "duration": 1.0,
@@ -282,7 +325,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -4)
+position = Vector2(-2, -4)
 sprite_frames = SubResource("SpriteFrames_pmoyv")
 animation = &"Idle"
 

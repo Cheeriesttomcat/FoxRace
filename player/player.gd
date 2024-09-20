@@ -58,12 +58,16 @@ func _physics_process(delta):
 					anim.play("run")
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
+				anim.play("crouch")
 		else:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			if velocity.y == 0:
-			#	if get_node("AnimatedSprite2D").animation != "hurt":
-				anim.play("idle")
+				if !down:
+			#		if get_node("AnimatedSprite2D").animation != "hurt":
+					anim.play("idle")
+				else:
+					anim.play("crouch")
 		if velocity.y > 0:
 		# get_node("AnimatedSprite2D").animation != "hurt":
 			anim.play("fall")
