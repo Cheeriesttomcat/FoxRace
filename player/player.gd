@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 7/8/24
+#   Last Modified 9/20/24
 #
 #
 #**************************************************************************************
@@ -44,15 +44,20 @@ func _physics_process(delta):
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction = Input.get_axis("ui_left", "ui_right")
+		var up = Input.is_action_pressed("ui_up")
+		var down = Input.is_action_pressed("ui_down")
 		if direction == -1:
 			get_node("AnimatedSprite2D").flip_h = true
 		elif direction == 1:
 			get_node("AnimatedSprite2D").flip_h = false
 		if direction:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
-			velocity.x = direction * SPEED
-			if velocity.y == 0:
-				anim.play("run")
+			if !down:
+				velocity.x = direction * SPEED
+				if velocity.y == 0:
+					anim.play("run")
+			else:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
 		else:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
 			velocity.x = move_toward(velocity.x, 0, SPEED)
