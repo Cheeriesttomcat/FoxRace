@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c1i0ghokrc07g"]
+[gd_scene load_steps=33 format=3 uid="uid://c1i0ghokrc07g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gjget"]
 [ext_resource type="Texture2D" uid="uid://cjcg0bw77uhb7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="2_dfm8r"]
@@ -15,8 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://f4aw7ggioujb" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/run/player-run-6.png" id="13_omt65"]
 [ext_resource type="Texture2D" uid="uid://c1xk1h27qrtnb" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/crouch/player-crouch-1.png" id="14_2f0fl"]
 [ext_resource type="Texture2D" uid="uid://dtp2f7oneevbi" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png" id="14_5xhif"]
+[ext_resource type="Texture2D" uid="uid://cb3p4q6wxee8f" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/climb/player-climb-1.png" id="14_f77ck"]
 [ext_resource type="Texture2D" uid="uid://bokgrlkxe5mbj" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/crouch/player-crouch-2.png" id="15_npykj"]
 [ext_resource type="Texture2D" uid="uid://d11ungdrplvg0" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png" id="15_q7xsh"]
+[ext_resource type="Texture2D" uid="uid://bpdc3d8wruxvm" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/climb/player-climb-2.png" id="15_us3l0"]
+[ext_resource type="Texture2D" uid="uid://ub1atawef65y" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/climb/player-climb-3.png" id="16_i0a1t"]
 [ext_resource type="AudioStream" uid="uid://brwqck66ehs38" path="res://sfx/toy-button-105724.mp3" id="16_yd4yr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ebmi"]
@@ -163,7 +166,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_4grqe"]
 resource_name = "run"
-length = 0.55
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -219,9 +222,39 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
+[sub_resource type="Animation" id="Animation_gfbl4"]
+resource_name = "climb"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"climb"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 2]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_820q6"]
 _data = {
 "RESET": SubResource("Animation_miuov"),
+"climb": SubResource("Animation_gfbl4"),
 "crouch": SubResource("Animation_wxjoo"),
 "fall": SubResource("Animation_g0yg7"),
 "hurt": SubResource("Animation_vev4u"),
@@ -281,6 +314,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_f77ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_us3l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i0a1t")
+}],
+"loop": true,
+"name": &"climb",
 "speed": 5.0
 }, {
 "frames": [{
