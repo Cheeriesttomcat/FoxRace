@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 7/1/24
-#   Last Modified 7/9/24
+#   Last Modified 9/20/24
 #
 #
 #**************************************************************************************
@@ -17,13 +17,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #This is the chase variable
 var chase = false
 #Set possum speed
-var SPEED = 300
+const SPEED = 300
 #Bounce off of possum
-var BOUNCE = -400
+const BOUNCE = -400
 #Point values
-var POINTS = 5
+const POINTS = 5
 #Damage Done
-var LOSS = 3
+const LOSS = 3
 
 #reset idle
 func _ready():

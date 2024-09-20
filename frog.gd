@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/25/24
-#   Last Modified 7/9/24
+#   Last Modified 9/20/24
 #
 #
 #**************************************************************************************
@@ -17,15 +17,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #This is the chase variable
 var chase = false
 #Set frog speed
-var SPEED = 100
+const SPEED = 100
 #Frog Hop Height
-var HOPS = -300
+const HOPS = -300
 #Bounce off of frog
-var BOUNCE = -400
+const BOUNCE = -400
 #Amount of points gained
-var POINTS = 5
+const POINTS = 5
 #Damage Done
-var LOSS = 3
+const LOSS = 3
 
 #reset idle
 func _ready():

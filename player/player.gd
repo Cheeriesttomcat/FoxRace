@@ -15,9 +15,11 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const BOUNCE_VELOCITY = -200.0
 #Set hurt stuff
-var OWW = 300
+const PAINTIME = .5
+const OWW = 300
 var pain = false
-var PAINTIME = .5
+#ladder checker
+var on_ladder := false
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

@@ -4,7 +4,7 @@
 
 #	Author CheeriestTomcat
 #	Created 7/2/24
-#   Last Modified 7/9/24
+#   Last Modified 9/20/24
 #
 #
 #**************************************************************************************
@@ -15,15 +15,15 @@ var player
 #This rotates the motion
 var toggle = false
 #Set eagle speed
-var SPEED = 75
+const SPEED = 75
 #Set UP/Down
-var TIMER = 2.0
+const TIMER = 2.0
 #Bounce off of Eagle
-var BOUNCE = -400
+const BOUNCE = -400
 #Point values
-var POINTS = 5
+const POINTS = 5
 #Damage Done
-var LOSS = 3
+const LOSS = 3
 
 
 func _ready():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c1i0ghokrc07g"]
+[gd_scene load_steps=34 format=3 uid="uid://c1i0ghokrc07g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gjget"]
 [ext_resource type="Texture2D" uid="uid://cjcg0bw77uhb7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="2_dfm8r"]
@@ -353,6 +353,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cm5w"]
+size = Vector2(12, 23)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_gjget")
 
@@ -372,7 +375,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -4)
+position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_pmoyv")
 animation = &"Idle"
 
@@ -380,3 +383,9 @@ animation = &"Idle"
 stream = ExtResource("16_yd4yr")
 
 [node name="PainTimer" type="Timer" parent="."]
+
+[node name="LadderChecker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderChecker"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6cm5w")
