@@ -1,10 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://i1csi006i85d"]
+[gd_scene load_steps=4 format=3 uid="uid://i1csi006i85d"]
+
+[ext_resource type="Texture2D" uid="uid://dfw61eaxl0af6" path="res://spike-skull.png" id="1_fr2q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfup1"]
+size = Vector2(16, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_885gn"]
+size = Vector2(12, 7)
 
 [node name="SpikesSkull" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fr2q5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_vfup1")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_885gn")
