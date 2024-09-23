@@ -70,7 +70,7 @@ func _physics_process(delta):
 				#anim.play_backwards("climb")
 		elif direction:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
-			if down:
+			if down and is_on_floor():
 				velocity.x = move_toward(velocity.x, 0, (SPEED * Slide))
 				anim.play("crouch")
 			else:
@@ -87,7 +87,7 @@ func _physics_process(delta):
 		else:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
 			velocity.x = move_toward(velocity.x, 0, (SPEED * Slide))
-			if velocity.y == 0:
+			if velocity.y == 0 and is_on_floor():
 				if !down:
 			#		if get_node("AnimatedSprite2D").animation != "hurt":
 					anim.play("idle")

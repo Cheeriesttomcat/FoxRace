@@ -23,7 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://brwqck66ehs38" path="res://sfx/toy-button-105724.mp3" id="16_yd4yr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ebmi"]
-size = Vector2(19, 22)
+size = Vector2(12, 20)
 
 [sub_resource type="Animation" id="Animation_miuov"]
 length = 0.001
@@ -354,13 +354,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cm5w"]
-size = Vector2(13, 21)
+size = Vector2(2, 20)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_gjget")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 2)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_3ebmi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -389,7 +389,6 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LadderChecker"]
-position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_6cm5w")
 
 [connection signal="body_entered" from="LadderChecker" to="." method="_on_ladder_checker_body_entered"]
