@@ -964,7 +964,7 @@ layer_0/tile_data = PackedInt32Array(1507332, 196608, 1, 1572868, 196608, 3, 163
 position = Vector2(-3, 6)
 tile_set = SubResource("TileSet_4ox25")
 format = 2
-layer_0/tile_data = PackedInt32Array(1441801, 458752, 10, 1376265, 458752, 10, 1310729, 458752, 10)
+layer_0/tile_data = PackedInt32Array(1441801, 458752, 10, 1376265, 458752, 10, 1310729, 458752, 10, 1245193, 458752, 10, 1179657, 458752, 10, 1114121, 458752, 10, 1048585, 458752, 10, 983049, 458752, 10, 851977, 458752, 10, 917513, 458752, 10, 786441, 458752, 10, 720905, 458752, 10)
 
 [node name="BG" type="ParallaxBackground" parent="."]
 layer = -101
