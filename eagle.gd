@@ -4,7 +4,7 @@
 
 #	Author CheeriestTomcat
 #	Created 7/2/24
-#   Last Modified 9/20/24
+#   Last Modified 9/23/24
 #
 #
 #**************************************************************************************
@@ -77,7 +77,7 @@ func _on_player_death_body_entered(body):
 #Hurt the player
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
-		if get_node("AnimatedSprite2D").animation != "death" and (body.get_node("AnimatedSprite2D").animation != "hurt"):
+		if get_node("AnimatedSprite2D").animation != "death" and (body.get_node("AnimatedSprite2D").animation != "hurt") and body.pain != true:
 			Game.PlayerHp -= LOSS
 			if (player.position.x - self.position.x) < 0:
 				body.velocity.x = -1.0 * body.OWW

@@ -4,7 +4,7 @@ extends StaticBody2D
 #	Spikes with skull-- OW
 #	Author CheeriestTomcat
 #	Created 9/20/24
-#   Last Modified 9/20/24
+#   Last Modified 9/23/24
 #
 #
 #**************************************************************************************
@@ -16,7 +16,7 @@ func _ready():
 
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
-		if body.get_node("AnimatedSprite2D").animation != "hurt":
+		if body.pain != true and body.get_node("AnimatedSprite2D").animation != "hurt":
 			Game.PlayerHp -= IMPACT
 			if (player.position.x - self.position.x) < 0:
 				body.velocity.x = -1.0 * body.OWW
