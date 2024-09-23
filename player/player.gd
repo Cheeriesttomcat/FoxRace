@@ -14,6 +14,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const BOUNCE_VELOCITY = -200.0
+const SLIDE = .01
 #Set hurt stuff
 const PAINTIME = .5
 const OWW = 300
@@ -59,10 +60,14 @@ func _physics_process(delta):
 			get_node("AnimatedSprite2D").flip_h = false
 		if direction:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
-			velocity.x = direction * SPEED
-			if velocity.y == 0:
-				anim.play("run")
-			climbin = false
+			if down:
+				velocity.x = move_toward(velocity.x, 0, (SPEED * SLIDE))
+				anim.play("crouch")
+			else:
+				velocity.x = direction * SPEED
+				if velocity.y == 0:
+					anim.play("run")
+				climbin = false
 #			else:
 #				velocity.x = move_toward(velocity.x, 0, SPEED)
 #				anim.play("crouch")
@@ -79,7 +84,7 @@ func _physics_process(delta):
 			anim.pause()
 		else:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.x = move_toward(velocity.x, 0, (SPEED * SLIDE))
 			if velocity.y == 0:
 				if !down:
 			#		if get_node("AnimatedSprite2D").animation != "hurt":
