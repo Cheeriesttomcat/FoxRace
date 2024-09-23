@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 9/20/24
+#   Last Modified 9/23/24
 #
 #
 #**************************************************************************************
@@ -14,7 +14,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const BOUNCE_VELOCITY = -200.0
-const SLIDE = .01
+var SLIDE = .1
 #Set hurt stuff
 const PAINTIME = .5
 const OWW = 300
