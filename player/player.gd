@@ -14,7 +14,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const BOUNCE_VELOCITY = -200.0
-var SLIDE = .1
+var Slide = .1
 #Set hurt stuff
 const PAINTIME = .5
 const OWW = 300
@@ -58,10 +58,19 @@ func _physics_process(delta):
 			get_node("AnimatedSprite2D").flip_h = true
 		elif direction == 1:
 			get_node("AnimatedSprite2D").flip_h = false
-		if direction:
+		if on_ladder and (up or down):
+			velocity.x = 0
+			climbin = true
+			anim.play("climb")
+			if up:
+				velocity.y = -SPEED * .5
+			elif down:
+				velocity.y = SPEED * .5
+				#anim.play_backwards("climb")
+		elif direction:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
 			if down:
-				velocity.x = move_toward(velocity.x, 0, (SPEED * SLIDE))
+				velocity.x = move_toward(velocity.x, 0, (SPEED * Slide))
 				anim.play("crouch")
 			else:
 				velocity.x = direction * SPEED
@@ -71,20 +80,12 @@ func _physics_process(delta):
 #			else:
 #				velocity.x = move_toward(velocity.x, 0, SPEED)
 #				anim.play("crouch")
-		elif on_ladder and (up or down):
-			climbin = true
-			if up:
-				velocity.y = -SPEED * .5
-				anim.play("climb")
-			else:
-				velocity.y = SPEED * .5
-				anim.play_backwards("climb")
 		elif climbin:
 			velocity.y = 0
 			anim.pause()
 		else:
 			#if get_node("AnimatedSprite2D").animation != "hurt":
-			velocity.x = move_toward(velocity.x, 0, (SPEED * SLIDE))
+			velocity.x = move_toward(velocity.x, 0, (SPEED * Slide))
 			if velocity.y == 0:
 				if !down:
 			#		if get_node("AnimatedSprite2D").animation != "hurt":
