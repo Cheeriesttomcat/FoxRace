@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=22 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://41cla48c8jhm" path="res://spikes.tscn" id="10_e2itu"]
 [ext_resource type="Texture2D" uid="uid://dwt0o5b43bdnc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/bush.png" id="10_n4co8"]
 [ext_resource type="Texture2D" uid="uid://c5rvd6lnhvlw8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/palm.png" id="11_xrl5m"]
+[ext_resource type="PackedScene" uid="uid://cdavxkvkr4ggk" path="res://spike_top.tscn" id="12_grqc6"]
 [ext_resource type="PackedScene" uid="uid://i1csi006i85d" path="res://SpikesSkull.tscn" id="13_o150a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
@@ -1057,16 +1058,43 @@ texture = ExtResource("11_xrl5m")
 visibility_layer = 513
 
 [node name="SpikesSkull" parent="Mobs" instance=ExtResource("13_o150a")]
-position = Vector2(263, 369)
+position = Vector2(1649, 640)
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_umvxs")]
 position = Vector2(785, 338)
 
 [node name="Spikes" parent="Mobs" instance=ExtResource("10_e2itu")]
-position = Vector2(1241, 640)
+position = Vector2(1592, 635)
 
 [node name="Spikes2" parent="Mobs" instance=ExtResource("10_e2itu")]
-position = Vector2(173, 363)
+position = Vector2(1607, 635)
+
+[node name="Spikes3" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(1622, 635)
+
+[node name="Spikes4" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(1637, 635)
+
+[node name="Spikes5" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(1668, 635)
+
+[node name="SpikeTop" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1733, 570)
+
+[node name="SpikeTop2" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1747, 570)
+
+[node name="SpikeTop3" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1760, 570)
+
+[node name="SpikeTop4" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1773, 570)
+
+[node name="SpikeTop5" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1786, 570)
+
+[node name="SpikeTop6" parent="Mobs" instance=ExtResource("12_grqc6")]
+position = Vector2(1799, 570)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
