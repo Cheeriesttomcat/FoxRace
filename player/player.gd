@@ -14,6 +14,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const BOUNCE_VELOCITY = -200.0
+#const BOING_TIME = .5
 var Slide = .1
 #Set hurt stuff
 const PAINTIME = .5
@@ -58,7 +59,7 @@ func _physics_process(delta):
 			get_node("AnimatedSprite2D").flip_h = true
 		elif direction == 1:
 			get_node("AnimatedSprite2D").flip_h = false
-		if on_ladder and (up or down):
+		if on_ladder and (up or down) and !Input.is_action_just_pressed("ui_accept"):
 			velocity.x = 0
 			climbin = true
 			anim.play("climb")
