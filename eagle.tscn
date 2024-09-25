@@ -85,6 +85,7 @@ frame_progress = 1.0
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="radius" type="CollisionShape2D" parent="PlayerDetection"]
+visible = false
 shape = SubResource("CircleShape2D_et34w")
 
 [node name="PlayerDeath" type="Area2D" parent="."]

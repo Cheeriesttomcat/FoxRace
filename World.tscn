@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cdr45cb6kgady"]
+[gd_scene load_steps=41 format=3 uid="uid://cdr45cb6kgady"]
 
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="1_toglb"]
 [ext_resource type="Texture2D" uid="uid://q3wks1kx77nc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tileset.png" id="1_xl5kr"]
@@ -23,10 +23,16 @@
 [ext_resource type="Texture2D" uid="uid://2b1r7t2y3gub" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/face-block.png" id="15_7coib"]
 [ext_resource type="Texture2D" uid="uid://cm510vvbp3n58" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/sign.png" id="15_bmyig"]
 [ext_resource type="Texture2D" uid="uid://cc3sngom5ufh5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/skulls.png" id="16_tt1ub"]
+[ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://eagle.tscn" id="18_qul6i"]
 [ext_resource type="Texture2D" uid="uid://dgdjie5041cm8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree.png" id="18_w0wvk"]
+[ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://possum.tscn" id="19_cl231"]
 [ext_resource type="Texture2D" uid="uid://12ggaxvsjn3n" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/block.png" id="21_1yb36"]
 [ext_resource type="Texture2D" uid="uid://bphlea3d6srt2" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree-house.png" id="22_gbqrh"]
 [ext_resource type="Texture2D" uid="uid://btj52sandj04w" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/block-big.png" id="22_uhad1"]
+[ext_resource type="PackedScene" uid="uid://b6twcvl4ubne0" path="res://Collectables/diamond.tscn" id="28_kw3m6"]
+[ext_resource type="Texture2D" uid="uid://b1pdilltlf670" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/pine.png" id="28_n62om"]
+[ext_resource type="Texture2D" uid="uid://c1txgq6ooxuh0" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/rock-1.png" id="29_7kblq"]
+[ext_resource type="Texture2D" uid="uid://b50gialxxssot" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/rock.png" id="30_kkb48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p77nn"]
 texture = ExtResource("1_xl5kr")
@@ -1176,8 +1182,13 @@ texture = ExtResource("11_hnxf3")
 
 [node name="Wooden-house" type="Sprite2D" parent="Back Details"]
 z_index = -1
-position = Vector2(9150, 340)
+position = Vector2(9154, 339)
 texture = ExtResource("12_su1dq")
+
+[node name="Rock-3" type="Sprite2D" parent="Back Details"]
+z_index = -1
+position = Vector2(7722, 429)
+texture = ExtResource("6_pg057")
 
 [node name="Player" type="Node2D" parent="."]
 visibility_layer = 512
@@ -1226,6 +1237,63 @@ position = Vector2(1786, 570)
 
 [node name="SpikeTop6" parent="Mobs" instance=ExtResource("12_grqc6")]
 position = Vector2(1799, 570)
+
+[node name="Eagle" parent="Mobs" instance=ExtResource("18_qul6i")]
+position = Vector2(4438, 141)
+
+[node name="Eagle2" parent="Mobs" instance=ExtResource("18_qul6i")]
+position = Vector2(4944, 149)
+
+[node name="Eagle3" parent="Mobs" instance=ExtResource("18_qul6i")]
+position = Vector2(5463, 142)
+
+[node name="Frog2" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(5901, 150)
+
+[node name="Possum" parent="Mobs" instance=ExtResource("19_cl231")]
+position = Vector2(6786, 214)
+
+[node name="Frog3" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(7622, 456)
+
+[node name="Frog4" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(8252, 389)
+
+[node name="Frog5" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(8733, 468)
+
+[node name="Possum2" parent="Mobs" instance=ExtResource("19_cl231")]
+position = Vector2(5364, 393)
+
+[node name="Frog6" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(4665, 452)
+
+[node name="Frog7" parent="Mobs" instance=ExtResource("5_umvxs")]
+position = Vector2(3219, 293)
+
+[node name="Spikes6" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4907, 588)
+
+[node name="Spikes7" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4922, 588)
+
+[node name="Spikes8" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4937, 588)
+
+[node name="SpikesSkull2" parent="Mobs" instance=ExtResource("13_o150a")]
+position = Vector2(4949, 593)
+
+[node name="Spikes9" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4968, 588)
+
+[node name="Spikes10" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4983, 588)
+
+[node name="Spikes11" parent="Mobs" instance=ExtResource("10_e2itu")]
+position = Vector2(4998, 588)
+
+[node name="Possum3" parent="Mobs" instance=ExtResource("19_cl231")]
+position = Vector2(8593, 393)
 
 [node name="Fun details" type="Node" parent="."]
 
@@ -1369,6 +1437,70 @@ texture = ExtResource("10_n4co8")
 position = Vector2(7390, 438)
 texture = ExtResource("10_n4co8")
 
+[node name="Pine" type="Sprite2D" parent="Fun details"]
+position = Vector2(3896, 136)
+texture = ExtResource("28_n62om")
+
+[node name="Pine2" type="Sprite2D" parent="Fun details"]
+position = Vector2(4689, 390)
+texture = ExtResource("28_n62om")
+
+[node name="Rock-1" type="Sprite2D" parent="Fun details"]
+position = Vector2(8343, 480)
+texture = ExtResource("29_7kblq")
+
+[node name="Rock" type="Sprite2D" parent="Fun details"]
+position = Vector2(7952, 447)
+texture = ExtResource("30_kkb48")
+
+[node name="Pine3" type="Sprite2D" parent="Fun details"]
+position = Vector2(8823, 324)
+texture = ExtResource("28_n62om")
+
+[node name="Pine4" type="Sprite2D" parent="Fun details"]
+position = Vector2(8878, 324)
+texture = ExtResource("28_n62om")
+
+[node name="Pine5" type="Sprite2D" parent="Fun details"]
+position = Vector2(8937, 324)
+texture = ExtResource("28_n62om")
+
+[node name="Pine6" type="Sprite2D" parent="Fun details"]
+position = Vector2(9008, 326)
+texture = ExtResource("28_n62om")
+
+[node name="Pine7" type="Sprite2D" parent="Fun details"]
+position = Vector2(9076, 324)
+texture = ExtResource("28_n62om")
+
+[node name="Rock2" type="Sprite2D" parent="Fun details"]
+position = Vector2(8426, 448)
+texture = ExtResource("30_kkb48")
+
+[node name="Pine8" type="Sprite2D" parent="Fun details"]
+position = Vector2(9239, 327)
+texture = ExtResource("28_n62om")
+
+[node name="Pine9" type="Sprite2D" parent="Fun details"]
+position = Vector2(9304, 328)
+texture = ExtResource("28_n62om")
+
+[node name="Pine10" type="Sprite2D" parent="Fun details"]
+position = Vector2(9369, 325)
+texture = ExtResource("28_n62om")
+
+[node name="Pine11" type="Sprite2D" parent="Fun details"]
+position = Vector2(9426, 328)
+texture = ExtResource("28_n62om")
+
+[node name="Pine12" type="Sprite2D" parent="Fun details"]
+position = Vector2(9486, 328)
+texture = ExtResource("28_n62om")
+
+[node name="Rock3" type="Sprite2D" parent="Fun details"]
+position = Vector2(8508, 480)
+texture = ExtResource("30_kkb48")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Hp" type="Label" parent="UI"]
@@ -1399,6 +1531,18 @@ position = Vector2(295, 261)
 
 [node name="Cherry2" parent="Collectables" instance=ExtResource("6_qsiyt")]
 position = Vector2(578, 255)
+
+[node name="Cherry3" parent="Collectables" instance=ExtResource("6_qsiyt")]
+position = Vector2(4302, 94)
+
+[node name="Cherry5" parent="Collectables" instance=ExtResource("6_qsiyt")]
+position = Vector2(4811, 98)
+
+[node name="Cherry6" parent="Collectables" instance=ExtResource("6_qsiyt")]
+position = Vector2(5069, 94)
+
+[node name="Diamond" parent="Collectables" instance=ExtResource("28_kw3m6")]
+position = Vector2(5588, 89)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_dl73s")
