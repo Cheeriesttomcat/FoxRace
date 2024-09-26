@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqnjbq50ygl65"]
 
+[ext_resource type="Script" path="res://bg.gd" id="1_6644e"]
 [ext_resource type="Texture2D" uid="uid://bvlxs31gcmi1e" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="1_k5mul"]
-[ext_resource type="Script" path="res://bg.gd" id="1_n81m7"]
 [ext_resource type="Texture2D" uid="uid://bc3buykebs0x1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/middle.png" id="2_plqwu"]
 [ext_resource type="Texture2D" uid="uid://drr3v476p4eai" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/plant-house.png" id="3_fey5e"]
 
 [node name="BG" type="ParallaxBackground"]
-script = ExtResource("1_n81m7")
+script = ExtResource("1_6644e")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1152, 0)

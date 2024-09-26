@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1d8qavdxamht"]
+
+[ext_resource type="Texture2D" uid="uid://beu7qxfp8tk3h" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-sky.png" id="1_4h3jx"]
+[ext_resource type="Texture2D" uid="uid://etyyi2rjjw4q" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-far-back.png" id="2_qhglr"]
+[ext_resource type="Texture2D" uid="uid://buctm0ads22to" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-hills.png" id="3_8yfpc"]
+[ext_resource type="Texture2D" uid="uid://cb6ooh7ywg1ep" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-trees.png" id="4_unaes"]
+[ext_resource type="Texture2D" uid="uid://4otbh28qpp5m" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/foreground.png" id="5_kn05t"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jk6q"]
+texture = ExtResource("5_kn05t")
+0:0/0 = 0
+7:0/0 = 0
+17:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+3:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+17:1/0 = 0
+0:2/0 = 0
+3:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+17:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+17:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+0:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+4:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+15:10/0 = 0
+0:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8ayeo"]
+sources/0 = SubResource("TileSetAtlasSource_4jk6q")
+
+[node name="World2" type="Node2D"]
+
+[node name="BG2" type="ParallaxBackground" parent="."]
+
+[node name="CloudLayer" type="ParallaxLayer" parent="BG2"]
+
+[node name="Cloud" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(513, 308)
+scale = Vector2(4, 3.018)
+texture = ExtResource("1_4h3jx")
+
+[node name="DistantRock" type="ParallaxLayer" parent="BG2"]
+
+[node name="Plateau" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(384, 311)
+scale = Vector2(3, 3)
+texture = ExtResource("2_qhglr")
+
+[node name="Hills" type="ParallaxLayer" parent="BG2"]
+
+[node name="Rolling Hills" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(264, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8yfpc")
+
+[node name="Trees" type="ParallaxLayer" parent="BG2"]
+
+[node name="Tree" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(436, 593)
+scale = Vector2(2, 2)
+texture = ExtResource("4_unaes")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_8ayeo")
+format = 2
