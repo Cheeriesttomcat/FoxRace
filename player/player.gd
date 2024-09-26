@@ -44,7 +44,7 @@ func _physics_process(delta):
 
 	if $PainTimer.is_stopped():
 		# Handle jump.
-		if Input.is_action_pressed("ui_accept") and (is_on_floor() or climbin):
+		if (Input.is_action_pressed("ui_accept") and is_on_floor()) or (Input.is_action_just_pressed("ui_accept") and climbin):
 			#get_node("AnimatedSprite2D").animation != "hurt":
 			anim.play("jump")
 			velocity.y = JUMP_VELOCITY
