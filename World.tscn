@@ -1678,7 +1678,7 @@ position = Vector2(1281, 563)
 position = Vector2(1669, 307)
 
 [node name="Cherry7" parent="Collectables" instance=ExtResource("6_qsiyt")]
-position = Vector2(5116, 494)
+position = Vector2(4841, 507)
 
 [node name="Diamond4" parent="Collectables" instance=ExtResource("28_kw3m6")]
 position = Vector2(3430, 758)
