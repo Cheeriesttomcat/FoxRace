@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://ctsxhyt1lgvc6"]
 
-[ext_resource type="Script" path="res://possum.gd" id="1_2bks5"]
+[ext_resource type="Script" path="res://mobs/possum.gd" id="1_2bks5"]
 [ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="2_dxiv0"]
 [ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="3_6ab8l"]
 [ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="4_g2pn7"]

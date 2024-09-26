@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqssvtnye5ww1" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/enemy-deadth.png" id="1_4nq2x"]
 [ext_resource type="Texture2D" uid="uid://cfbasema5aqr7" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/frog-idle.png" id="1_l6mbh"]
-[ext_resource type="Script" path="res://frog.gd" id="1_prgqg"]
+[ext_resource type="Script" path="res://mobs/frog.gd" id="1_prgqg"]
 [ext_resource type="Texture2D" uid="uid://r5y1btgyqdtt" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/frog/jump/frog-jump-2.png" id="3_31tgi"]
 [ext_resource type="Texture2D" uid="uid://dt8by2vmj3fac" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/spritesheets/frog-jump.png" id="4_s8kl0"]
 [ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="5_2rytk"]

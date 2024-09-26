@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdavxkvkr4ggk"]
 
-[ext_resource type="Script" path="res://spike_top.gd" id="1_2qh01"]
+[ext_resource type="Script" path="res://obstacles/spike_top.gd" id="1_2qh01"]
 [ext_resource type="Texture2D" uid="uid://jnu514ae4l5h" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/spikes-top.png" id="1_awoay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gff1c"]

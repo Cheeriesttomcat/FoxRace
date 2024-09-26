@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 6/27/24
+#   Last Modified 9/26/24
 #
 #
 #**************************************************************************************
@@ -20,5 +20,6 @@ func _on_quit_pressed():
 func _on_play_pressed():
 	$ButtonPress.play()
 	Game.PlayerHp = 21
+	Game.Gold = 0
 	await get_tree().create_timer(.5).timeout
 	get_tree().change_scene_to_file("res://World.tscn")
