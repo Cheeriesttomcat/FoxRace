@@ -1271,9 +1271,6 @@ position = Vector2(4665, 452)
 [node name="Frog7" parent="Mobs" instance=ExtResource("5_umvxs")]
 position = Vector2(3219, 293)
 
-[node name="Spikes7" parent="Mobs" instance=ExtResource("10_e2itu")]
-position = Vector2(4922, 588)
-
 [node name="Spikes8" parent="Mobs" instance=ExtResource("10_e2itu")]
 position = Vector2(4937, 588)
 
