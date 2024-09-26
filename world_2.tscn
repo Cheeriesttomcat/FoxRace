@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1d8qavdxamht"]
+[gd_scene load_steps=12 format=3 uid="uid://b1d8qavdxamht"]
 
 [ext_resource type="Texture2D" uid="uid://beu7qxfp8tk3h" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-sky.png" id="1_4h3jx"]
 [ext_resource type="Script" path="res://CloudLayer.gd" id="1_jcva1"]
@@ -84,6 +84,54 @@ texture = ExtResource("5_kn05t")
 [sub_resource type="TileSet" id="TileSet_8ayeo"]
 sources/0 = SubResource("TileSetAtlasSource_4jk6q")
 
+[sub_resource type="GDScript" id="GDScript_0ckvj"]
+script/source = "#**************************************************************************************
+#
+#	HP
+#
+#	Author CheeriestTomcat
+#	Created 6/27/24
+#   Last Modified 6/27/24
+#
+#
+#**************************************************************************************
+extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	text = \"HP: \" + str(Game.PlayerHp)
+"
+
+[sub_resource type="GDScript" id="GDScript_2htcw"]
+script/source = "#**************************************************************************************
+#
+#	Gold
+#
+#	Author CheeriestTomcat
+#	Created 6/27/24
+#   Last Modified 6/27/24
+#
+#
+#**************************************************************************************
+extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	text = \"Gold: \" + str(Game.Gold)
+"
+
 [node name="World2" type="Node2D"]
 
 [node name="BG2" type="ParallaxBackground" parent="."]
@@ -131,3 +179,25 @@ layer_0/tile_data = PackedInt32Array(3014656, 393216, 4, 3080192, 393216, 5, 301
 
 [node name="Player" parent="Player" instance=ExtResource("7_dclue")]
 position = Vector2(38, 723)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hp" type="Label" parent="UI"]
+offset_left = 29.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "HP"
+script = SubResource("GDScript_0ckvj")
+
+[node name="Gold" type="Label" parent="UI"]
+offset_left = 28.0
+offset_top = 40.0
+offset_right = 82.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Gold"
+script = SubResource("GDScript_2htcw")
