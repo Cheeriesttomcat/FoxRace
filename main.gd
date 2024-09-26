@@ -22,4 +22,4 @@ func _on_play_pressed():
 	Game.PlayerHp = 21
 	Game.Gold = 0
 	await get_tree().create_timer(.5).timeout
-	get_tree().change_scene_to_file("res://World.tscn")
+	get_tree().change_scene_to_file("res://World_2.tscn")
