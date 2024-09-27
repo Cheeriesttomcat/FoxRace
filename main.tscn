@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_v1h7i"]
 [ext_resource type="PackedScene" uid="uid://bqnjbq50ygl65" path="res://bg.tscn" id="2_h6vxy"]
-[ext_resource type="AudioStream" uid="uid://cwmavg7t27ymq" path="res://music/Music by Pascal Belisle/platformer_level03_loop.ogg" id="3_jvyn1"]
+[ext_resource type="AudioStream" uid="uid://ugdlbjm2qd1l" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/fantasy Dragon.ogg" id="3_0736p"]
 [ext_resource type="AudioStream" uid="uid://ds2hkjwlkcjio" path="res://sfx/game-start-6104.mp3" id="4_lvq0o"]
 
 [node name="Main" type="Node2D"]
@@ -26,7 +26,7 @@ text = "Quit
 [node name="BG" parent="." instance=ExtResource("2_h6vxy")]
 
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_jvyn1")
+stream = ExtResource("3_0736p")
 volume_db = 10.0
 autoplay = true
 
