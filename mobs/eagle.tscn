@@ -78,9 +78,6 @@ shape = SubResource("CircleShape2D_4a48u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_uk8iv")
-animation = &"death"
-frame = 5
-frame_progress = 1.0
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
@@ -91,12 +88,14 @@ shape = SubResource("CircleShape2D_et34w")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="squish" type="CollisionShape2D" parent="PlayerDeath"]
+visible = false
 position = Vector2(-3, -3.25)
 shape = SubResource("RectangleShape2D_ug7si")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="ow" type="CollisionShape2D" parent="PlayerCollision"]
+visible = false
 position = Vector2(-3, 5)
 shape = SubResource("CircleShape2D_0qvd1")
 

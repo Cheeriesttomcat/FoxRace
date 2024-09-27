@@ -82,7 +82,7 @@ radius = 9.05539
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_03rpo")
 animation = &"fly"
-frame_progress = 0.815399
+frame_progress = 0.56642
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 9)
