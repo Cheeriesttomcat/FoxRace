@@ -535,11 +535,6 @@ position = Vector2(695, 726)
 scale = Vector2(2.44697, 2.03302)
 texture = ExtResource("4_unaes")
 
-[node name="Tree14" type="Sprite2D" parent="BG2/Trees"]
-position = Vector2(735, 676)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_unaes")
-
 [node name="Tree15" type="Sprite2D" parent="BG2/Trees"]
 position = Vector2(890.75, 801.75)
 scale = Vector2(1.06818, 1.07075)
@@ -568,11 +563,6 @@ texture = ExtResource("4_unaes")
 [node name="Tree8" type="Sprite2D" parent="BG2/Trees"]
 position = Vector2(1470.75, 747.75)
 scale = Vector2(1.14394, 1.46698)
-texture = ExtResource("4_unaes")
-
-[node name="Tree9" type="Sprite2D" parent="BG2/Trees"]
-position = Vector2(1826, 633)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_unaes")
 
 [node name="Tree10" type="Sprite2D" parent="BG2/Trees"]
@@ -679,5 +669,10 @@ texture = ExtResource("4_unaes")
 
 [node name="Tree5" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
 position = Vector2(4882, 771)
+scale = Vector2(5.89394, 4.38679)
+texture = ExtResource("4_unaes")
+
+[node name="Tree6" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
+position = Vector2(6003, 751)
 scale = Vector2(5.89394, 4.38679)
 texture = ExtResource("4_unaes")
