@@ -64,7 +64,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"fly",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -84,47 +84,48 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jpvbc"]
-radius = 9.05539
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkq6d"]
+size = Vector2(23, 13)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vnui"]
-radius = 222.144
+radius = 215.342
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnwrs"]
-size = Vector2(17, 21)
+size = Vector2(27, 19)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cxm1s"]
-radius = 14.0357
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cui87"]
+size = Vector2(31, 18)
 
 [node name="Bat" type="CharacterBody2D"]
 script = ExtResource("1_yd3hn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_03rpo")
-animation = &"drop"
+animation = &"fly"
+autoplay = "sleep"
+frame_progress = 0.709737
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 6)
-shape = SubResource("CircleShape2D_jpvbc")
+position = Vector2(3.5, 4.5)
+shape = SubResource("RectangleShape2D_dkq6d")
 
 [node name="DetectPlayer" type="Area2D" parent="."]
 
 [node name="Radius" type="CollisionShape2D" parent="DetectPlayer"]
+visible = false
 shape = SubResource("CircleShape2D_4vnui")
 
 [node name="Deff" type="Area2D" parent="."]
 
 [node name="Boing" type="CollisionShape2D" parent="Deff"]
-visible = false
-position = Vector2(6.5, -4.5)
+position = Vector2(4.5, -3.5)
 shape = SubResource("RectangleShape2D_qnwrs")
 
 [node name="owie" type="Area2D" parent="."]
 
 [node name="pain" type="CollisionShape2D" parent="owie"]
-visible = false
-position = Vector2(3, 3)
-shape = SubResource("CircleShape2D_cxm1s")
+position = Vector2(4.5, 5)
+shape = SubResource("RectangleShape2D_cui87")
 
 [node name="owsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_pdis1")

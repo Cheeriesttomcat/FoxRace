@@ -16,8 +16,8 @@ var player
 var wake = false
 #Drop generator
 var drop = RandomNumberGenerator.new()
-const MIN = .2
-const MAX = .75
+const MIN = .15
+const MAX = .5
 #Initial drop
 var breakfast = false
 const PLOPSPEED = 300
@@ -56,11 +56,12 @@ func _physics_process(_delta):
 					toggle = true
 					velocity.y = SPEED * -2
 				$zigzag.start(TIMER)
-		elif breakfast and $zigzag.is_stopped():
+		elif breakfast and ($zigzag.is_stopped() or self.is_on_floor()):
 			breakfast = false
 			velocity.x = SPEED * direction.x
-			print("I ate breakfast!")
+		#	print("I ate breakfast!")
 			get_node("AnimatedSprite2D").play("fly")
+			$zigzag.stop()
 		#else:
 		#	velocity.y = PLOPSPEED
 			
@@ -100,7 +101,7 @@ func death():
 func _on_detect_player_body_entered(body):
 	if body.name == "Player":
 		if !wake:
-			print("Waking up!")
+		#	print("Waking up!")
 			breakfast = true
 			var plop = drop.randf_range(MIN, MAX)
 			$zigzag.one_shot = true
@@ -116,4 +117,4 @@ func _on_detect_player_body_entered(body):
 				get_node("AnimatedSprite2D").flip_h = true
 			
 		wake = true
-		print("I'm awake!")
+		#print("I'm awake!")
