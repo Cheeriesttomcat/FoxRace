@@ -640,10 +640,6 @@ theme_override_font_sizes/font_size = 24
 text = "Gold"
 script = SubResource("GDScript_2htcw")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_4c0j6")
-autoplay = true
-
 [node name="ForeGround" type="ParallaxBackground" parent="."]
 layer = 2
 
@@ -719,3 +715,7 @@ position = Vector2(3350, 541)
 
 [node name="Cherry5" parent="Collectables" instance=ExtResource("11_0c5ch")]
 position = Vector2(3846, 667)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4c0j6")
+autoplay = true
