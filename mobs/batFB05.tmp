@@ -43,14 +43,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_qiree")
-}],
-"loop": true,
-"name": &"drop",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("7_oxqgo")
 }, {
 "duration": 1.0,
@@ -88,7 +80,7 @@ animations = [{
 radius = 9.05539
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vnui"]
-radius = 222.144
+radius = 160.655
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnwrs"]
 size = Vector2(17, 21)
@@ -101,15 +93,16 @@ script = ExtResource("1_yd3hn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_03rpo")
-animation = &"drop"
+animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 6)
 shape = SubResource("CircleShape2D_jpvbc")
 
-[node name="DetectPlayer" type="Area2D" parent="."]
+[node name="Detect" type="Area2D" parent="."]
 
-[node name="Radius" type="CollisionShape2D" parent="DetectPlayer"]
+[node name="Radius" type="CollisionShape2D" parent="Detect"]
+visible = false
 shape = SubResource("CircleShape2D_4vnui")
 
 [node name="Deff" type="Area2D" parent="."]
@@ -131,6 +124,6 @@ stream = ExtResource("15_pdis1")
 
 [node name="zigzag" type="Timer" parent="."]
 
-[connection signal="body_entered" from="DetectPlayer" to="." method="_on_detect_player_body_entered"]
+[connection signal="body_entered" from="Detect" to="." method="_on_detect_body_entered"]
 [connection signal="body_entered" from="Deff" to="." method="_on_deff_body_entered"]
 [connection signal="body_entered" from="owie" to="." method="_on_owie_body_entered"]
