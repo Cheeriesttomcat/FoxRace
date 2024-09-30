@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ipvagggv42y6"]
+[gd_scene load_steps=21 format=3 uid="uid://ipvagggv42y6"]
 
 [ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_gayyg"]
+[ext_resource type="Script" path="res://mobs/bat.gd" id="1_yd3hn"]
 [ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_uft5q"]
 [ext_resource type="Texture2D" uid="uid://6a63ydlsn8g5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png" id="3_72t27"]
 [ext_resource type="Texture2D" uid="uid://dgpxfp2v5rse" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-4.png" id="4_mfeej"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dkjkfdbavymsi" path="res://collection/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bat/bat-hang/bat-hang2.png" id="11_p6bwk"]
 [ext_resource type="Texture2D" uid="uid://dfj1do2v4ee4" path="res://collection/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bat/bat-hang/bat-hang3.png" id="12_2en56"]
 [ext_resource type="Texture2D" uid="uid://bsyqmnjmwpr57" path="res://collection/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bat/bat-hang/bat-hang4.png" id="13_psmvb"]
+[ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="15_pdis1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_03rpo"]
 animations = [{
@@ -35,9 +37,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_rlhyo")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -77,13 +79,48 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jpvbc"]
 radius = 9.05539
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vnui"]
+radius = 160.655
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnwrs"]
+size = Vector2(17, 21)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxm1s"]
+radius = 14.0357
+
 [node name="Bat" type="CharacterBody2D"]
+script = ExtResource("1_yd3hn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_03rpo")
 animation = &"fly"
-frame_progress = 0.56642
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 9)
+position = Vector2(5, 6)
 shape = SubResource("CircleShape2D_jpvbc")
+
+[node name="Detect" type="Area2D" parent="."]
+
+[node name="Radius" type="CollisionShape2D" parent="Detect"]
+visible = false
+shape = SubResource("CircleShape2D_4vnui")
+
+[node name="Deff" type="Area2D" parent="."]
+
+[node name="Boing" type="CollisionShape2D" parent="Deff"]
+visible = false
+position = Vector2(6.5, -4.5)
+shape = SubResource("RectangleShape2D_qnwrs")
+
+[node name="owie" type="Area2D" parent="."]
+
+[node name="pain" type="CollisionShape2D" parent="owie"]
+visible = false
+position = Vector2(3, 3)
+shape = SubResource("CircleShape2D_cxm1s")
+
+[node name="owsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_pdis1")
+
+[connection signal="body_entered" from="Deff" to="." method="_on_deff_body_entered"]
+[connection signal="body_entered" from="owie" to="." method="_on_owie_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b1d8qavdxamht"]
+[gd_scene load_steps=20 format=3 uid="uid://b1d8qavdxamht"]
 
 [ext_resource type="Texture2D" uid="uid://beu7qxfp8tk3h" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-sky.png" id="1_4h3jx"]
 [ext_resource type="Script" path="res://CloudLayer.gd" id="1_jcva1"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://mobs/eagle.tscn" id="10_3p7dl"]
 [ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="11_0c5ch"]
 [ext_resource type="PackedScene" uid="uid://b6twcvl4ubne0" path="res://Collectables/diamond.tscn" id="12_7ee2f"]
+[ext_resource type="PackedScene" uid="uid://ipvagggv42y6" path="res://mobs/bat.tscn" id="13_aw5ln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jk6q"]
 texture = ExtResource("5_kn05t")
@@ -695,6 +696,9 @@ position = Vector2(3547, 744)
 
 [node name="Eagle6" parent="Mobs" instance=ExtResource("10_3p7dl")]
 position = Vector2(1675, 606)
+
+[node name="Bat" parent="Mobs" instance=ExtResource("13_aw5ln")]
+position = Vector2(184, 743)
 
 [node name="Collectables" type="Node" parent="."]
 
