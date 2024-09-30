@@ -474,19 +474,19 @@ position = Vector2(896, 221)
 texture = ExtResource("2_qhglr")
 
 [node name="Plateau5" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(1152.5, 221)
+position = Vector2(1152, 221)
 texture = ExtResource("2_qhglr")
 
 [node name="Plateau6" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(1408.5, 221.5)
+position = Vector2(1408, 221)
 texture = ExtResource("2_qhglr")
 
 [node name="Plateau7" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(1664.5, 221.5)
+position = Vector2(1664, 221)
 texture = ExtResource("2_qhglr")
 
 [node name="Plateau8" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(1920.5, 222)
+position = Vector2(1920, 221)
 texture = ExtResource("2_qhglr")
 
 [node name="Hills" type="ParallaxLayer" parent="BG2"]
