@@ -880,3 +880,18 @@ position = Vector2(3846, 667)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_4c0j6")
 autoplay = true
+
+[node name="Diamond" parent="." instance=ExtResource("12_7ee2f")]
+position = Vector2(5097, 687)
+
+[node name="Cherry" parent="." instance=ExtResource("11_0c5ch")]
+position = Vector2(5151, 331)
+
+[node name="Cherry2" parent="." instance=ExtResource("11_0c5ch")]
+position = Vector2(4257, 747)
+
+[node name="Cherry3" parent="." instance=ExtResource("11_0c5ch")]
+position = Vector2(6063, 702)
+
+[node name="Cherry4" parent="." instance=ExtResource("11_0c5ch")]
+position = Vector2(6406, 705)
