@@ -498,6 +498,46 @@ position = Vector2(3968, 212.18)
 scale = Vector2(1, 0.755)
 texture = ExtResource("1_4h3jx")
 
+[node name="Cloud17" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(4223.5, 212.12)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud18" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(4479.5, 212.06)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud19" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(4735.5, 212.06)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud20" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(4991.5, 212.12)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud21" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(5247.5, 212.12)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud22" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(5503.5, 212.12)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud23" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(5759.5, 212.12)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
+[node name="Cloud24" type="Sprite2D" parent="BG2/CloudLayer"]
+position = Vector2(6015.5, 212.18)
+scale = Vector2(1, 0.755)
+texture = ExtResource("1_4h3jx")
+
 [node name="DistantRock" type="ParallaxLayer" parent="BG2"]
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.2, 1)
@@ -566,6 +606,38 @@ texture = ExtResource("2_qhglr")
 position = Vector2(3968, 222)
 texture = ExtResource("2_qhglr")
 
+[node name="Plateau17" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(4224, 222)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau18" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(4480, 222.5)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau19" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(4736, 222.5)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau20" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(4992, 223)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau21" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(5248, 223)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau22" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(5504, 223)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau23" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(5760, 223)
+texture = ExtResource("2_qhglr")
+
+[node name="Plateau24" type="Sprite2D" parent="BG2/DistantRock"]
+position = Vector2(6016, 223)
+texture = ExtResource("2_qhglr")
+
 [node name="Hills" type="ParallaxLayer" parent="BG2"]
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.5, 1)
@@ -632,6 +704,38 @@ texture = ExtResource("3_8yfpc")
 
 [node name="Rolling Hills16" type="Sprite2D" parent="BG2/Hills"]
 position = Vector2(3709.5, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills17" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(4477.5, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills18" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(4221.5, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills19" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(4989, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills20" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(4733, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills21" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(5501, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills22" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(5245, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills23" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(6012.5, 280.5)
+texture = ExtResource("3_8yfpc")
+
+[node name="Rolling Hills24" type="Sprite2D" parent="BG2/Hills"]
+position = Vector2(5756.5, 280.5)
 texture = ExtResource("3_8yfpc")
 
 [node name="Trees" type="ParallaxLayer" parent="BG2"]
@@ -793,6 +897,21 @@ texture = ExtResource("4_unaes")
 
 [node name="Tree4" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
 position = Vector2(2930, 768)
+scale = Vector2(5.89394, 4.38679)
+texture = ExtResource("4_unaes")
+
+[node name="Tree5" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
+position = Vector2(4499, 784)
+scale = Vector2(5.89394, 4.38679)
+texture = ExtResource("4_unaes")
+
+[node name="Tree7" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
+position = Vector2(6704, 921)
+scale = Vector2(5.89394, 4.38679)
+texture = ExtResource("4_unaes")
+
+[node name="Tree6" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
+position = Vector2(10265, 681)
 scale = Vector2(5.89394, 4.38679)
 texture = ExtResource("4_unaes")
 
