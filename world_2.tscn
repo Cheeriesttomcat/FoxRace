@@ -837,6 +837,36 @@ position = Vector2(7363, 716)
 scale = Vector2(2.56059, 1.37264)
 texture = ExtResource("4_unaes")
 
+[node name="Tree26" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(8441, 749)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
+[node name="Tree27" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(8693, 741)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
+[node name="Tree28" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(9308, 728)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
+[node name="Tree29" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(9475, 752)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
+[node name="Tree30" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(9913, 748)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
+[node name="Tree31" type="Sprite2D" parent="BG2/Trees"]
+position = Vector2(10695, 735)
+scale = Vector2(2.56059, 1.37264)
+texture = ExtResource("4_unaes")
+
 [node name="Player" type="Node" parent="."]
 
 [node name="Player" parent="Player" instance=ExtResource("7_dclue")]
@@ -907,11 +937,6 @@ texture = ExtResource("4_unaes")
 
 [node name="Tree7" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
 position = Vector2(6704, 921)
-scale = Vector2(5.89394, 4.38679)
-texture = ExtResource("4_unaes")
-
-[node name="Tree6" type="Sprite2D" parent="ForeGround/ParallaxLayer"]
-position = Vector2(10265, 681)
 scale = Vector2(5.89394, 4.38679)
 texture = ExtResource("4_unaes")
 
