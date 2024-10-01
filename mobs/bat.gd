@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 9/30/24
-#   Last Modified 9/30/24
+#   Last Modified 10/1/24
 #
 #
 #**************************************************************************************
@@ -56,6 +56,13 @@ func _physics_process(_delta):
 					toggle = true
 					velocity.y = SPEED * -2
 				$zigzag.start(TIMER)
+			if self.is_on_wall():
+				if get_node("AnimatedSprite2D").flip_h == true:
+					get_node("AnimatedSprite2D").flip_h = false
+					velocity.x = -1 * SPEED * direction.x
+				else:
+					get_node("AnimatedSprite2D").flip_h = true
+					velocity.x = SPEED * direction.x
 		elif breakfast and ($zigzag.is_stopped() or self.is_on_floor()):
 			breakfast = false
 			velocity.x = SPEED * direction.x
