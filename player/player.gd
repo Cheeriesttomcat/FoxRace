@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 6/24/24
-#   Last Modified 9/26/24
+#   Last Modified 10/2/2024
 #
 #
 #**************************************************************************************
@@ -112,3 +112,9 @@ func _on_ladder_checker_body_entered(body):
 func _on_ladder_checker_body_exited(body):
 	on_ladder = false
 	#print("Off ladder")
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	Game.PlayerHp = 0
+#		queue_free()
+#		get_tree().change_scene_to_file("res://main.tscn")
