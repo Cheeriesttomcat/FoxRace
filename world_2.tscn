@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1d8qavdxamht"]
+[gd_scene load_steps=23 format=3 uid="uid://b1d8qavdxamht"]
 
 [ext_resource type="Texture2D" uid="uid://beu7qxfp8tk3h" path="res://collection/Sunny Land Collection Files/Assets/Environments/Sunny Rocky/PNG/sunny-mountains-sky.png" id="1_4h3jx"]
 [ext_resource type="Script" path="res://CloudLayer.gd" id="1_jcva1"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://41cla48c8jhm" path="res://obstacles/spikes.tscn" id="11_15tmx"]
 [ext_resource type="PackedScene" uid="uid://b6twcvl4ubne0" path="res://Collectables/diamond.tscn" id="12_7ee2f"]
 [ext_resource type="PackedScene" uid="uid://ipvagggv42y6" path="res://mobs/bat.tscn" id="13_aw5ln"]
+[ext_resource type="Texture2D" uid="uid://drr3v476p4eai" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/plant-house.png" id="15_d3pj6"]
+[ext_resource type="Texture2D" uid="uid://b1pdilltlf670" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/pine.png" id="16_j6t5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jk6q"]
 texture = ExtResource("5_kn05t")
@@ -513,31 +515,6 @@ position = Vector2(4735.5, 212.06)
 scale = Vector2(1, 0.755)
 texture = ExtResource("1_4h3jx")
 
-[node name="Cloud20" type="Sprite2D" parent="BG2/CloudLayer"]
-position = Vector2(4991.5, 212.12)
-scale = Vector2(1, 0.755)
-texture = ExtResource("1_4h3jx")
-
-[node name="Cloud21" type="Sprite2D" parent="BG2/CloudLayer"]
-position = Vector2(5247.5, 212.12)
-scale = Vector2(1, 0.755)
-texture = ExtResource("1_4h3jx")
-
-[node name="Cloud22" type="Sprite2D" parent="BG2/CloudLayer"]
-position = Vector2(5503.5, 212.12)
-scale = Vector2(1, 0.755)
-texture = ExtResource("1_4h3jx")
-
-[node name="Cloud23" type="Sprite2D" parent="BG2/CloudLayer"]
-position = Vector2(5759.5, 212.12)
-scale = Vector2(1, 0.755)
-texture = ExtResource("1_4h3jx")
-
-[node name="Cloud24" type="Sprite2D" parent="BG2/CloudLayer"]
-position = Vector2(6015.5, 212.18)
-scale = Vector2(1, 0.755)
-texture = ExtResource("1_4h3jx")
-
 [node name="DistantRock" type="ParallaxLayer" parent="BG2"]
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.2, 1)
@@ -618,26 +595,6 @@ texture = ExtResource("2_qhglr")
 position = Vector2(4736, 222.5)
 texture = ExtResource("2_qhglr")
 
-[node name="Plateau20" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(4992, 223)
-texture = ExtResource("2_qhglr")
-
-[node name="Plateau21" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(5248, 223)
-texture = ExtResource("2_qhglr")
-
-[node name="Plateau22" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(5504, 223)
-texture = ExtResource("2_qhglr")
-
-[node name="Plateau23" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(5760, 223)
-texture = ExtResource("2_qhglr")
-
-[node name="Plateau24" type="Sprite2D" parent="BG2/DistantRock"]
-position = Vector2(6016, 223)
-texture = ExtResource("2_qhglr")
-
 [node name="Hills" type="ParallaxLayer" parent="BG2"]
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.5, 1)
@@ -714,28 +671,8 @@ texture = ExtResource("3_8yfpc")
 position = Vector2(4221.5, 280.5)
 texture = ExtResource("3_8yfpc")
 
-[node name="Rolling Hills19" type="Sprite2D" parent="BG2/Hills"]
-position = Vector2(4989, 280.5)
-texture = ExtResource("3_8yfpc")
-
 [node name="Rolling Hills20" type="Sprite2D" parent="BG2/Hills"]
 position = Vector2(4733, 280.5)
-texture = ExtResource("3_8yfpc")
-
-[node name="Rolling Hills21" type="Sprite2D" parent="BG2/Hills"]
-position = Vector2(5501, 280.5)
-texture = ExtResource("3_8yfpc")
-
-[node name="Rolling Hills22" type="Sprite2D" parent="BG2/Hills"]
-position = Vector2(5245, 280.5)
-texture = ExtResource("3_8yfpc")
-
-[node name="Rolling Hills23" type="Sprite2D" parent="BG2/Hills"]
-position = Vector2(6012.5, 280.5)
-texture = ExtResource("3_8yfpc")
-
-[node name="Rolling Hills24" type="Sprite2D" parent="BG2/Hills"]
-position = Vector2(5756.5, 280.5)
 texture = ExtResource("3_8yfpc")
 
 [node name="Trees" type="ParallaxLayer" parent="BG2"]
@@ -1062,3 +999,34 @@ position = Vector2(8866, 403)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_4c0j6")
 autoplay = true
+
+[node name="End stuff" type="Node" parent="."]
+
+[node name="Plant-house" type="Sprite2D" parent="End stuff"]
+z_index = -1
+position = Vector2(9167, 717)
+texture = ExtResource("15_d3pj6")
+
+[node name="Pine" type="Sprite2D" parent="End stuff"]
+position = Vector2(8932, 704)
+texture = ExtResource("16_j6t5a")
+
+[node name="Pine2" type="Sprite2D" parent="End stuff"]
+position = Vector2(8999, 705)
+texture = ExtResource("16_j6t5a")
+
+[node name="Pine3" type="Sprite2D" parent="End stuff"]
+position = Vector2(9064, 702)
+texture = ExtResource("16_j6t5a")
+
+[node name="Pine4" type="Sprite2D" parent="End stuff"]
+position = Vector2(9263, 702)
+texture = ExtResource("16_j6t5a")
+
+[node name="Pine5" type="Sprite2D" parent="End stuff"]
+position = Vector2(9317, 703)
+texture = ExtResource("16_j6t5a")
+
+[node name="Pine6" type="Sprite2D" parent="End stuff"]
+position = Vector2(9382, 703)
+texture = ExtResource("16_j6t5a")
