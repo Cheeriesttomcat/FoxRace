@@ -881,22 +881,22 @@ texture = ExtResource("4_unaes")
 [node name="Mobs" type="Node" parent="."]
 
 [node name="Eagle" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(543, 755)
+position = Vector2(548, 726)
 
 [node name="Eagle2" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(1158, 582)
+position = Vector2(1165, 542)
 
 [node name="Eagle3" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(2244, 554)
+position = Vector2(2234, 507)
 
 [node name="Eagle4" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(3024, 573)
+position = Vector2(3023, 537)
 
 [node name="Eagle5" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(3547, 744)
+position = Vector2(3543, 690)
 
 [node name="Eagle6" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(1675, 606)
+position = Vector2(1677, 576)
 
 [node name="Bat" parent="Mobs" instance=ExtResource("13_aw5ln")]
 position = Vector2(4154, 618)
@@ -950,7 +950,7 @@ position = Vector2(7232, 667)
 position = Vector2(7938, 430)
 
 [node name="Eagle9" parent="Mobs" instance=ExtResource("10_3p7dl")]
-position = Vector2(8455, 464)
+position = Vector2(8447, 429)
 
 [node name="Collectables" type="Node" parent="."]
 
