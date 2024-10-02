@@ -503,11 +503,10 @@ sources/0 = SubResource("TileSetAtlasSource_y5mpj")
 [node name="World3" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
-scale = Vector2(1.5, 1.5)
-transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 scroll_offset = Vector2(0, -231.35)
 
 [node name="Back" type="ParallaxLayer" parent="BG"]
+scale = Vector2(1.5, 1.5)
 motion_scale = Vector2(0.1, 1)
 
 [node name="Fade" type="Sprite2D" parent="BG/Back"]
@@ -575,6 +574,7 @@ position = Vector2(8923, 136)
 texture = ExtResource("1_aftlk")
 
 [node name="Middle" type="ParallaxLayer" parent="BG"]
+scale = Vector2(1.5, 1.5)
 motion_scale = Vector2(0.3, 1)
 
 [node name="BackTrees" type="Sprite2D" parent="BG/Middle"]
@@ -642,6 +642,7 @@ position = Vector2(8926, 136)
 texture = ExtResource("2_4gclb")
 
 [node name="Front" type="ParallaxLayer" parent="BG"]
+scale = Vector2(1.5, 1.5)
 motion_scale = Vector2(0.5, 1)
 
 [node name="FrontTree" type="Sprite2D" parent="BG/Front"]
@@ -716,9 +717,10 @@ layer_0/tile_data = PackedInt32Array(1507365, 1310720, 14, 1572901, 1310720, 15,
 [node name="Player" type="Node" parent="."]
 
 [node name="Player" parent="Player" instance=ExtResource("5_gpyia")]
-position = Vector2(82, 331)
+position = Vector2(94, 185)
 
 [node name="Camera2D2" type="Camera2D" parent="Player/Player"]
+position = Vector2(111, -66)
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
