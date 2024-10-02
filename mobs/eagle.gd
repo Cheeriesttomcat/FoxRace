@@ -4,7 +4,7 @@
 
 #	Author CheeriestTomcat
 #	Created 7/2/24
-#   Last Modified 9/23/24
+#   Last Modified 10/2/24
 #
 #
 #**************************************************************************************
@@ -17,7 +17,7 @@ var toggle = false
 #Set eagle speed
 const SPEED = 75
 #Set UP/Down
-const TIMER = 2.0
+const TIMER = 1.0
 #Bounce off of Eagle
 const BOUNCE = -400
 #Point values
