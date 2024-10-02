@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmj8vup44cex7"]
+[gd_scene load_steps=10 format=3 uid="uid://dmj8vup44cex7"]
 
 [ext_resource type="Texture2D" uid="uid://dl503sblhm7i7" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/back.png" id="1_aftlk"]
 [ext_resource type="Texture2D" uid="uid://n0a6m6ouax76" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/middle.png" id="2_4gclb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvmrsgyvx6l0s" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/tiles.png" id="4_l4rqs"]
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="5_gpyia"]
 [ext_resource type="Script" path="res://Camera2D2.gd" id="6_m83am"]
+[ext_resource type="AudioStream" uid="uid://c34xtj4s7bvsp" path="res://music2/SunnyLand Music/adventure pack 2 ogg/megabot.ogg" id="7_0i4nr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5mpj"]
 texture = ExtResource("4_l4rqs")
@@ -721,6 +722,11 @@ position = Vector2(82, 331)
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
-limit_bottom = 405
+limit_bottom = 400
 editor_draw_limits = true
 script = ExtResource("6_m83am")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0i4nr")
+volume_db = -1.0
+autoplay = true
