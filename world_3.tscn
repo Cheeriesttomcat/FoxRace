@@ -1,0 +1,214 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmj8vup44cex7"]
+
+[ext_resource type="Texture2D" uid="uid://dl503sblhm7i7" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/back.png" id="1_aftlk"]
+[ext_resource type="Texture2D" uid="uid://n0a6m6ouax76" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/middle.png" id="2_4gclb"]
+[ext_resource type="Texture2D" uid="uid://vwcpi1gyjys3" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/front.png" id="3_3nav1"]
+
+[node name="World3" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Back" type="ParallaxLayer" parent="BG"]
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.1, 1)
+
+[node name="Fade" type="Sprite2D" parent="BG/Back"]
+position = Vector2(288, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade2" type="Sprite2D" parent="BG/Back"]
+position = Vector2(864, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade3" type="Sprite2D" parent="BG/Back"]
+position = Vector2(1439.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade4" type="Sprite2D" parent="BG/Back"]
+position = Vector2(2015.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade5" type="Sprite2D" parent="BG/Back"]
+position = Vector2(2590, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade6" type="Sprite2D" parent="BG/Back"]
+position = Vector2(3166, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade7" type="Sprite2D" parent="BG/Back"]
+position = Vector2(3741.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade8" type="Sprite2D" parent="BG/Back"]
+position = Vector2(4317.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade9" type="Sprite2D" parent="BG/Back"]
+position = Vector2(4893.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade10" type="Sprite2D" parent="BG/Back"]
+position = Vector2(5469.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade11" type="Sprite2D" parent="BG/Back"]
+position = Vector2(6045, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade12" type="Sprite2D" parent="BG/Back"]
+position = Vector2(6621, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade13" type="Sprite2D" parent="BG/Back"]
+position = Vector2(7195.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade14" type="Sprite2D" parent="BG/Back"]
+position = Vector2(7771.5, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade15" type="Sprite2D" parent="BG/Back"]
+position = Vector2(8347, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade16" type="Sprite2D" parent="BG/Back"]
+position = Vector2(8923, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Middle" type="ParallaxLayer" parent="BG"]
+visible = false
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.3, 1)
+
+[node name="BackTrees" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(288, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees2" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(864, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees3" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(1439.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees4" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(2015.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees5" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(2591.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees6" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(3167.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees7" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(3743, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees8" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(4319, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees9" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(4895, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees10" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(5471, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees11" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(6046.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees12" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(6622.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees13" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(7198.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees14" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(7774.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees15" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(8350, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees16" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(8926, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="Front" type="ParallaxLayer" parent="BG"]
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.5, 1)
+
+[node name="FrontTree" type="Sprite2D" parent="BG/Front"]
+position = Vector2(288, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree2" type="Sprite2D" parent="BG/Front"]
+position = Vector2(864, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree3" type="Sprite2D" parent="BG/Front"]
+position = Vector2(1440, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree4" type="Sprite2D" parent="BG/Front"]
+position = Vector2(2016, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree5" type="Sprite2D" parent="BG/Front"]
+position = Vector2(2592, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree6" type="Sprite2D" parent="BG/Front"]
+position = Vector2(3168, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree7" type="Sprite2D" parent="BG/Front"]
+position = Vector2(3744, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree8" type="Sprite2D" parent="BG/Front"]
+position = Vector2(4320, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree9" type="Sprite2D" parent="BG/Front"]
+position = Vector2(4896, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree10" type="Sprite2D" parent="BG/Front"]
+position = Vector2(5472, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree11" type="Sprite2D" parent="BG/Front"]
+position = Vector2(6048, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree12" type="Sprite2D" parent="BG/Front"]
+position = Vector2(6624, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree13" type="Sprite2D" parent="BG/Front"]
+position = Vector2(7200, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree14" type="Sprite2D" parent="BG/Front"]
+position = Vector2(7776, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree15" type="Sprite2D" parent="BG/Front"]
+position = Vector2(8352, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree16" type="Sprite2D" parent="BG/Front"]
+position = Vector2(8928, 136)
+texture = ExtResource("3_3nav1")
