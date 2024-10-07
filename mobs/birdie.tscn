@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://v8bxsvld6q5w"]
+[gd_scene load_steps=16 format=3 uid="uid://v8bxsvld6q5w"]
 
 [ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_c6rek"]
 [ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_8tveq"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://tfmy6lffoivu" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin6.png" id="12_q0jpj"]
 [ext_resource type="Texture2D" uid="uid://b1wweifdd2uh5" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin7.png" id="13_ypqsa"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lqlwm"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cydtl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -62,12 +62,19 @@ animations = [{
 "texture": ExtResource("13_ypqsa")
 }],
 "loop": true,
-"name": &"flight",
+"name": &"default",
 "speed": 10.0
 }]
 
-[node name="Birdie" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_kyk1l"]
+radius = 4.12311
+
+[node name="Birdie" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_lqlwm")
-animation = &"flight"
+sprite_frames = SubResource("SpriteFrames_cydtl")
+frame_progress = 0.937729
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5)
+shape = SubResource("CircleShape2D_kyk1l")
