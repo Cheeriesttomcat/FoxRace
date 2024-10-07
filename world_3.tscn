@@ -547,7 +547,6 @@ sources/0 = SubResource("TileSetAtlasSource_y5mpj")
 [node name="World3" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
-visible = false
 scroll_offset = Vector2(0, -231.35)
 
 [node name="Back" type="ParallaxLayer" parent="BG"]
