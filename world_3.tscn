@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmj8vup44cex7"]
+[gd_scene load_steps=12 format=3 uid="uid://dmj8vup44cex7"]
 
 [ext_resource type="Texture2D" uid="uid://dl503sblhm7i7" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/back.png" id="1_aftlk"]
 [ext_resource type="Texture2D" uid="uid://n0a6m6ouax76" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/middle.png" id="2_4gclb"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="5_gpyia"]
 [ext_resource type="Script" path="res://Camera2D2.gd" id="6_m83am"]
 [ext_resource type="AudioStream" uid="uid://c34xtj4s7bvsp" path="res://music2/SunnyLand Music/adventure pack 2 ogg/megabot.ogg" id="7_0i4nr"]
+[ext_resource type="Texture2D" uid="uid://dgdjie5041cm8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree.png" id="8_rf3ap"]
+[ext_resource type="Texture2D" uid="uid://bphlea3d6srt2" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree-house.png" id="9_1021d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5mpj"]
 texture = ExtResource("4_l4rqs")
@@ -873,3 +875,34 @@ script = ExtResource("6_m83am")
 stream = ExtResource("7_0i4nr")
 volume_db = -1.0
 autoplay = true
+
+[node name="Fun details" type="Node" parent="."]
+
+[node name="Tree" type="Sprite2D" parent="Fun details"]
+position = Vector2(20228, 285)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree2" type="Sprite2D" parent="Fun details"]
+position = Vector2(20164, 284)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree3" type="Sprite2D" parent="Fun details"]
+position = Vector2(20102, 284)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree4" type="Sprite2D" parent="Fun details"]
+position = Vector2(20437, 282)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree5" type="Sprite2D" parent="Fun details"]
+position = Vector2(20503, 282)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree6" type="Sprite2D" parent="Fun details"]
+position = Vector2(20566, 280)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree-house" type="Sprite2D" parent="Fun details"]
+z_index = -1
+position = Vector2(20328, 268)
+texture = ExtResource("9_1021d")
