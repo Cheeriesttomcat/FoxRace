@@ -617,6 +617,38 @@ texture = ExtResource("1_aftlk")
 position = Vector2(8923, 136)
 texture = ExtResource("1_aftlk")
 
+[node name="Fade17" type="Sprite2D" parent="BG/Back"]
+position = Vector2(9498.67, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade18" type="Sprite2D" parent="BG/Back"]
+position = Vector2(10074.7, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade19" type="Sprite2D" parent="BG/Back"]
+position = Vector2(10650.2, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade20" type="Sprite2D" parent="BG/Back"]
+position = Vector2(11226.2, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade21" type="Sprite2D" parent="BG/Back"]
+position = Vector2(11800.7, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade22" type="Sprite2D" parent="BG/Back"]
+position = Vector2(12376.7, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade23" type="Sprite2D" parent="BG/Back"]
+position = Vector2(12952.2, 136)
+texture = ExtResource("1_aftlk")
+
+[node name="Fade24" type="Sprite2D" parent="BG/Back"]
+position = Vector2(13528.2, 136)
+texture = ExtResource("1_aftlk")
+
 [node name="Middle" type="ParallaxLayer" parent="BG"]
 scale = Vector2(1.5, 1.5)
 motion_scale = Vector2(0.3, 1)
@@ -685,6 +717,38 @@ texture = ExtResource("2_4gclb")
 position = Vector2(8926, 136)
 texture = ExtResource("2_4gclb")
 
+[node name="BackTrees17" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(9502, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees18" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(10078, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees19" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(10654, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees20" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(11229.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees21" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(11805.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees22" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(12381.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees23" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(12957.5, 136)
+texture = ExtResource("2_4gclb")
+
+[node name="BackTrees24" type="Sprite2D" parent="BG/Middle"]
+position = Vector2(13533, 136)
+texture = ExtResource("2_4gclb")
+
 [node name="Front" type="ParallaxLayer" parent="BG"]
 scale = Vector2(1.5, 1.5)
 motion_scale = Vector2(0.5, 1)
@@ -751,6 +815,38 @@ texture = ExtResource("3_3nav1")
 
 [node name="FrontTree16" type="Sprite2D" parent="BG/Front"]
 position = Vector2(8928, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree17" type="Sprite2D" parent="BG/Front"]
+position = Vector2(9504, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree18" type="Sprite2D" parent="BG/Front"]
+position = Vector2(10080, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree19" type="Sprite2D" parent="BG/Front"]
+position = Vector2(10656, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree20" type="Sprite2D" parent="BG/Front"]
+position = Vector2(11232, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree21" type="Sprite2D" parent="BG/Front"]
+position = Vector2(11808, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree22" type="Sprite2D" parent="BG/Front"]
+position = Vector2(12384, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree23" type="Sprite2D" parent="BG/Front"]
+position = Vector2(12960, 136)
+texture = ExtResource("3_3nav1")
+
+[node name="FrontTree24" type="Sprite2D" parent="BG/Front"]
+position = Vector2(13536, 136)
 texture = ExtResource("3_3nav1")
 
 [node name="Floor" type="TileMap" parent="."]
