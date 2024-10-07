@@ -1,0 +1,350 @@
+[gd_scene load_steps=4 format=3 uid="uid://dliiwnfktkv0l"]
+
+[ext_resource type="Texture2D" uid="uid://csny3ad0rhh5o" path="res://collection/Sunny Land Collection Files/Assets/Environments/Day-Platformer/PNG/sky.png" id="1_rhdg7"]
+[ext_resource type="Texture2D" uid="uid://dk6np3i0181d" path="res://collection/Sunny Land Collection Files/Assets/Environments/Day-Platformer/PNG/clouds.png" id="2_ueuu2"]
+[ext_resource type="Texture2D" uid="uid://chdrvbevq8ioh" path="res://collection/Sunny Land Collection Files/Assets/Environments/Day-Platformer/PNG/trees.png" id="3_25obu"]
+
+[node name="World_4" type="Node2D"]
+
+[node name="BG4" type="ParallaxBackground" parent="."]
+
+[node name="Sky Layer" type="ParallaxLayer" parent="BG4"]
+scale = Vector2(3, 3)
+
+[node name="Sky" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(8, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky2" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(24, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky3" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(40, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky4" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(56, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky5" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(72, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky6" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(88, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky7" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(104, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky8" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(120, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky9" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(136, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky10" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(152, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky11" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(168, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky12" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(184, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky13" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(200, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky14" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(216, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky15" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(232, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky16" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(248, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky17" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(264, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky18" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(280, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky19" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(296, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky20" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(312, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky21" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(328, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky22" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(344, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky23" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(360, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky24" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(376, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky25" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(392, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky26" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(408, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky27" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(424, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky28" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(440, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky29" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(456, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky30" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(472, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky31" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(488, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky32" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(504, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky33" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(520, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky34" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(536, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky35" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(552, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky36" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(568, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky37" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(584, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky38" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(600, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky39" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(616, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky40" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(632, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky41" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(648, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky42" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(664, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky43" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(680, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky44" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(696, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky45" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(712, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky46" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(728, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky47" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(744, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky48" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(760, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky49" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(776, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky50" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(792, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky51" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(808, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky52" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(824, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky53" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(840, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky54" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(856, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky55" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(872, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky56" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(888, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky57" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(904, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky58" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(920, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky59" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(936, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky60" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(952, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky61" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(968, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky62" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(984, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky63" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(1000, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Sky64" type="Sprite2D" parent="BG4/Sky Layer"]
+position = Vector2(1016, 40)
+texture = ExtResource("1_rhdg7")
+
+[node name="Cloud layer" type="ParallaxLayer" parent="BG4"]
+scale = Vector2(2, 2)
+
+[node name="Clouds" type="Sprite2D" parent="BG4/Cloud layer"]
+position = Vector2(230, 116.5)
+texture = ExtResource("2_ueuu2")
+
+[node name="Clouds2" type="Sprite2D" parent="BG4/Cloud layer"]
+position = Vector2(758, 75.5)
+texture = ExtResource("2_ueuu2")
+
+[node name="Clouds3" type="Sprite2D" parent="BG4/Cloud layer"]
+position = Vector2(1306, 102.5)
+texture = ExtResource("2_ueuu2")
+
+[node name="Tree Layer" type="ParallaxLayer" parent="BG4"]
+scale = Vector2(2, 2)
+
+[node name="Trees" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(72, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees2" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(216, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees3" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(360, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees4" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(504, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees5" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(648, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees6" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(792, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees7" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(936, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees8" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1080, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees9" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1224, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees10" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1368, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees11" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1512, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees12" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1656, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees13" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1800, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees14" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(1944, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees15" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(2088, 143.5)
+texture = ExtResource("3_25obu")
+
+[node name="Trees16" type="Sprite2D" parent="BG4/Tree Layer"]
+position = Vector2(2232, 143.5)
+texture = ExtResource("3_25obu")

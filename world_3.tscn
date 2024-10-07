@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dmj8vup44cex7"]
+[gd_scene load_steps=21 format=3 uid="uid://dmj8vup44cex7"]
 
 [ext_resource type="Texture2D" uid="uid://dl503sblhm7i7" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/back.png" id="1_aftlk"]
 [ext_resource type="Texture2D" uid="uid://n0a6m6ouax76" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/middle.png" id="2_4gclb"]
@@ -553,7 +553,55 @@ texture = ExtResource("4_l4rqs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_y5mpj")
 
-[node name="World3" type="Node2D"]
+[sub_resource type="GDScript" id="GDScript_q04rn"]
+script/source = "#**************************************************************************************
+#
+#	HP
+#
+#	Author CheeriestTomcat
+#	Created 6/27/24
+#   Last Modified 6/27/24
+#
+#
+#**************************************************************************************
+extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	text = \"HP: \" + str(Game.PlayerHp)
+"
+
+[sub_resource type="GDScript" id="GDScript_i0mbb"]
+script/source = "#**************************************************************************************
+#
+#	Gold
+#
+#	Author CheeriestTomcat
+#	Created 6/27/24
+#   Last Modified 6/27/24
+#
+#
+#**************************************************************************************
+extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	text = \"Gold: \" + str(Game.Gold)
+"
+
+[node name="World_3" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(0, -231.35)
@@ -1043,23 +1091,23 @@ position = Vector2(18171, 288)
 texture = ExtResource("10_yvvvu")
 
 [node name="Sign" type="Sprite2D" parent="Fun details"]
-position = Vector2(7745, 213)
+position = Vector2(7544, 281)
 texture = ExtResource("12_c2rox")
 
 [node name="Sign2" type="Sprite2D" parent="Fun details"]
-position = Vector2(9177, 354)
+position = Vector2(8790, 294)
 texture = ExtResource("12_c2rox")
 
 [node name="Sign3" type="Sprite2D" parent="Fun details"]
-position = Vector2(10760, 291)
+position = Vector2(10534, 324)
 texture = ExtResource("12_c2rox")
 
 [node name="Sign4" type="Sprite2D" parent="Fun details"]
-position = Vector2(13544, 240)
+position = Vector2(13345, 240)
 texture = ExtResource("12_c2rox")
 
 [node name="Sign5" type="Sprite2D" parent="Fun details"]
-position = Vector2(15476, 160)
+position = Vector2(15208, 162)
 texture = ExtResource("12_c2rox")
 
 [node name="Mobs" type="Node" parent="."]
@@ -1083,7 +1131,7 @@ position = Vector2(6026, 309)
 position = Vector2(7352, 284)
 
 [node name="Eagle4" parent="Mobs" instance=ExtResource("11_2kulw")]
-position = Vector2(8934, 309)
+position = Vector2(8625, 272)
 
 [node name="Frog4" parent="Mobs" instance=ExtResource("10_ol54c")]
 position = Vector2(9737, 324)
@@ -1158,3 +1206,25 @@ position = Vector2(19267, 230)
 
 [node name="Cherry9" parent="collectables" instance=ExtResource("12_k1jr7")]
 position = Vector2(4090, 264)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hp" type="Label" parent="UI"]
+offset_left = 29.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "HP"
+script = SubResource("GDScript_q04rn")
+
+[node name="Gold" type="Label" parent="UI"]
+offset_left = 28.0
+offset_top = 40.0
+offset_right = 82.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Gold"
+script = SubResource("GDScript_i0mbb")
