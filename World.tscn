@@ -24,9 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://2b1r7t2y3gub" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/face-block.png" id="15_7coib"]
 [ext_resource type="Texture2D" uid="uid://cm510vvbp3n58" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/sign.png" id="15_bmyig"]
 [ext_resource type="Texture2D" uid="uid://cc3sngom5ufh5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/skulls.png" id="16_tt1ub"]
-[ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://mobs/eagle.tscn" id="18_qul6i"]
 [ext_resource type="Texture2D" uid="uid://dgdjie5041cm8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree.png" id="18_w0wvk"]
 [ext_resource type="PackedScene" uid="uid://ctsxhyt1lgvc6" path="res://mobs/possum.tscn" id="19_cl231"]
+[ext_resource type="PackedScene" uid="uid://v8bxsvld6q5w" path="res://mobs/birdie.tscn" id="20_5jdoe"]
 [ext_resource type="Texture2D" uid="uid://12ggaxvsjn3n" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/block.png" id="21_1yb36"]
 [ext_resource type="Texture2D" uid="uid://bphlea3d6srt2" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree-house.png" id="22_gbqrh"]
 [ext_resource type="Texture2D" uid="uid://btj52sandj04w" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/block-big.png" id="22_uhad1"]
@@ -1248,15 +1248,6 @@ position = Vector2(1786, 570)
 [node name="SpikeTop6" parent="Mobs" instance=ExtResource("12_grqc6")]
 position = Vector2(1799, 570)
 
-[node name="Eagle" parent="Mobs" instance=ExtResource("18_qul6i")]
-position = Vector2(4426, 192)
-
-[node name="Eagle2" parent="Mobs" instance=ExtResource("18_qul6i")]
-position = Vector2(4950, 189)
-
-[node name="Eagle3" parent="Mobs" instance=ExtResource("18_qul6i")]
-position = Vector2(5465, 198)
-
 [node name="Frog2" parent="Mobs" instance=ExtResource("5_umvxs")]
 position = Vector2(5901, 150)
 
@@ -1385,6 +1376,15 @@ position = Vector2(3562, 775)
 
 [node name="Possum9" parent="Mobs" instance=ExtResource("19_cl231")]
 position = Vector2(3890, 694)
+
+[node name="Birdie" parent="Mobs" instance=ExtResource("20_5jdoe")]
+position = Vector2(4420, 144)
+
+[node name="Birdie2" parent="Mobs" instance=ExtResource("20_5jdoe")]
+position = Vector2(4935, 140)
+
+[node name="Birdie3" parent="Mobs" instance=ExtResource("20_5jdoe")]
+position = Vector2(5456, 144)
 
 [node name="Fun details" type="Node" parent="."]
 

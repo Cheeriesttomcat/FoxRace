@@ -18,7 +18,7 @@ const SPEED = 75
 #Set UP/Down
 const TIMER = 1.0
 #Bounce off of bird
-const BOUNCE = -400
+const BOUNCE = -200
 #Point values
 const POINTS = 5
 #Damage Done
