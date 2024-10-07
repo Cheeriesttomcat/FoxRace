@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://v8bxsvld6q5w"]
+[gd_scene load_steps=19 format=3 uid="uid://v8bxsvld6q5w"]
 
 [ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_c6rek"]
 [ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_8tveq"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bxwfp05ha66b7" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin5.png" id="11_l5kp1"]
 [ext_resource type="Texture2D" uid="uid://tfmy6lffoivu" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin6.png" id="12_q0jpj"]
 [ext_resource type="Texture2D" uid="uid://b1wweifdd2uh5" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin7.png" id="13_ypqsa"]
+[ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="14_qv3lo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cydtl"]
 animations = [{
@@ -69,12 +70,35 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyk1l"]
 radius = 4.12311
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6hpi"]
+size = Vector2(19, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aywu"]
+size = Vector2(11, 8)
+
 [node name="Birdie" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cydtl")
-frame_progress = 0.937729
+frame_progress = 0.738725
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
 shape = SubResource("CircleShape2D_kyk1l")
+
+[node name="Stomp" type="Area2D" parent="."]
+
+[node name="Poof" type="CollisionShape2D" parent="Stomp"]
+position = Vector2(2.5, -3)
+shape = SubResource("RectangleShape2D_t6hpi")
+
+[node name="Hurty" type="Area2D" parent="."]
+
+[node name="Ow" type="CollisionShape2D" parent="Hurty"]
+position = Vector2(1.5, 6)
+shape = SubResource("RectangleShape2D_1aywu")
+
+[node name="owsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_qv3lo")
+
+[node name="Timer" type="Timer" parent="."]
