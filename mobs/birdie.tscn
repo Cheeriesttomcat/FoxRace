@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://v8bxsvld6q5w"]
+
+[ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_c6rek"]
+[ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_8tveq"]
+[ext_resource type="Texture2D" uid="uid://6a63ydlsn8g5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png" id="3_4bqrv"]
+[ext_resource type="Texture2D" uid="uid://dgpxfp2v5rse" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-4.png" id="4_4efq0"]
+[ext_resource type="Texture2D" uid="uid://b5eld7dw2buwo" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-5.png" id="5_vxf2l"]
+[ext_resource type="Texture2D" uid="uid://dyf0q8viopqcl" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-6.png" id="6_5h68y"]
+[ext_resource type="Texture2D" uid="uid://d162b2pysikde" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin1.png" id="7_3ms7r"]
+[ext_resource type="Texture2D" uid="uid://mt1v1llckwxo" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin2.png" id="8_chqyo"]
+[ext_resource type="Texture2D" uid="uid://bdmsmrq4xi7nf" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin3.png" id="9_tbep6"]
+[ext_resource type="Texture2D" uid="uid://cvkrcv82niv1w" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin4.png" id="10_yj3vw"]
+[ext_resource type="Texture2D" uid="uid://bxwfp05ha66b7" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin5.png" id="11_l5kp1"]
+[ext_resource type="Texture2D" uid="uid://tfmy6lffoivu" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin6.png" id="12_q0jpj"]
+[ext_resource type="Texture2D" uid="uid://b1wweifdd2uh5" path="res://collection/Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin7.png" id="13_ypqsa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqlwm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c6rek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8tveq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4bqrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4efq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vxf2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5h68y")
+}],
+"loop": false,
+"name": &"death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3ms7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_chqyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tbep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yj3vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l5kp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q0jpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ypqsa")
+}],
+"loop": true,
+"name": &"flight",
+"speed": 10.0
+}]
+
+[node name="Birdie" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lqlwm")
+animation = &"flight"
