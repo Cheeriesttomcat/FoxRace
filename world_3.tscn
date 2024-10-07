@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmj8vup44cex7"]
+[gd_scene load_steps=19 format=3 uid="uid://dmj8vup44cex7"]
 
 [ext_resource type="Texture2D" uid="uid://dl503sblhm7i7" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/back.png" id="1_aftlk"]
 [ext_resource type="Texture2D" uid="uid://n0a6m6ouax76" path="res://collection/Sunny Land Collection Files/Assets/Environments/Forest of Illusion/Forest of Illusion Expansion Pack/Layers/middle.png" id="2_4gclb"]
@@ -9,6 +9,13 @@
 [ext_resource type="AudioStream" uid="uid://c34xtj4s7bvsp" path="res://music2/SunnyLand Music/adventure pack 2 ogg/megabot.ogg" id="7_0i4nr"]
 [ext_resource type="Texture2D" uid="uid://dgdjie5041cm8" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree.png" id="8_rf3ap"]
 [ext_resource type="Texture2D" uid="uid://bphlea3d6srt2" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/tree-house.png" id="9_1021d"]
+[ext_resource type="PackedScene" uid="uid://bpwe8n8e5i07h" path="res://mobs/frog.tscn" id="10_ol54c"]
+[ext_resource type="Texture2D" uid="uid://c0hyk6tn0ja1l" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/shrooms.png" id="10_yvvvu"]
+[ext_resource type="PackedScene" uid="uid://vn4q44unh5b4" path="res://mobs/eagle.tscn" id="11_2kulw"]
+[ext_resource type="Texture2D" uid="uid://dwt0o5b43bdnc" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/bush.png" id="11_go7kj"]
+[ext_resource type="Texture2D" uid="uid://cm510vvbp3n58" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/sign.png" id="12_c2rox"]
+[ext_resource type="PackedScene" uid="uid://cwds1m2pjx5hc" path="res://Collectables/Cherry.tscn" id="12_k1jr7"]
+[ext_resource type="PackedScene" uid="uid://b6twcvl4ubne0" path="res://Collectables/diamond.tscn" id="13_fxmap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5mpj"]
 texture = ExtResource("4_l4rqs")
@@ -879,27 +886,27 @@ autoplay = true
 [node name="Fun details" type="Node" parent="."]
 
 [node name="Tree" type="Sprite2D" parent="Fun details"]
-position = Vector2(20228, 285)
+position = Vector2(20228, 291)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree2" type="Sprite2D" parent="Fun details"]
-position = Vector2(20164, 284)
+position = Vector2(20163, 291)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree3" type="Sprite2D" parent="Fun details"]
-position = Vector2(20102, 284)
+position = Vector2(20114, 290)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree4" type="Sprite2D" parent="Fun details"]
-position = Vector2(20437, 282)
+position = Vector2(20436, 291)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree5" type="Sprite2D" parent="Fun details"]
-position = Vector2(20503, 282)
+position = Vector2(20499, 292)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree6" type="Sprite2D" parent="Fun details"]
-position = Vector2(20566, 280)
+position = Vector2(20560, 292)
 texture = ExtResource("8_rf3ap")
 
 [node name="Tree-house" type="Sprite2D" parent="Fun details"]
@@ -907,4 +914,247 @@ z_index = -1
 position = Vector2(20328, 268)
 texture = ExtResource("9_1021d")
 
+[node name="Tree7" type="Sprite2D" parent="Fun details"]
+position = Vector2(2247, 210)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree8" type="Sprite2D" parent="Fun details"]
+position = Vector2(4994, 293)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree9" type="Sprite2D" parent="Fun details"]
+position = Vector2(6174, 257)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree10" type="Sprite2D" parent="Fun details"]
+position = Vector2(2292, 212)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree11" type="Sprite2D" parent="Fun details"]
+position = Vector2(8284, 228)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree12" type="Sprite2D" parent="Fun details"]
+position = Vector2(11262, 275)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree13" type="Sprite2D" parent="Fun details"]
+position = Vector2(12751, 290)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree14" type="Sprite2D" parent="Fun details"]
+position = Vector2(15348, 113)
+texture = ExtResource("8_rf3ap")
+
+[node name="Tree15" type="Sprite2D" parent="Fun details"]
+position = Vector2(17758, 276)
+texture = ExtResource("8_rf3ap")
+
+[node name="Shrooms" type="Sprite2D" parent="Fun details"]
+position = Vector2(921, 308)
+texture = ExtResource("10_yvvvu")
+
+[node name="Bush" type="Sprite2D" parent="Fun details"]
+position = Vector2(1306, 349)
+texture = ExtResource("11_go7kj")
+
+[node name="Bush2" type="Sprite2D" parent="Fun details"]
+position = Vector2(2758, 236)
+texture = ExtResource("11_go7kj")
+
+[node name="Shrooms2" type="Sprite2D" parent="Fun details"]
+position = Vector2(3402, 259)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms3" type="Sprite2D" parent="Fun details"]
+position = Vector2(4479, 369)
+texture = ExtResource("10_yvvvu")
+
+[node name="Bush3" type="Sprite2D" parent="Fun details"]
+position = Vector2(5358, 335)
+texture = ExtResource("11_go7kj")
+
+[node name="Shrooms4" type="Sprite2D" parent="Fun details"]
+position = Vector2(5770, 372)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms5" type="Sprite2D" parent="Fun details"]
+position = Vector2(6719, 261)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms6" type="Sprite2D" parent="Fun details"]
+position = Vector2(7428, 308)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms7" type="Sprite2D" parent="Fun details"]
+position = Vector2(8568, 291)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms8" type="Sprite2D" parent="Fun details"]
+position = Vector2(9149, 357)
+texture = ExtResource("10_yvvvu")
+
+[node name="Bush4" type="Sprite2D" parent="Fun details"]
+position = Vector2(9472, 331)
+texture = ExtResource("11_go7kj")
+
+[node name="Shrooms9" type="Sprite2D" parent="Fun details"]
+position = Vector2(10228, 358)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms10" type="Sprite2D" parent="Fun details"]
+position = Vector2(11086, 325)
+texture = ExtResource("10_yvvvu")
+
+[node name="Bush5" type="Sprite2D" parent="Fun details"]
+position = Vector2(12072, 383)
+texture = ExtResource("11_go7kj")
+
+[node name="Shrooms11" type="Sprite2D" parent="Fun details"]
+position = Vector2(12663, 340)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms12" type="Sprite2D" parent="Fun details"]
+position = Vector2(13484, 246)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms13" type="Sprite2D" parent="Fun details"]
+position = Vector2(14244, 279)
+texture = ExtResource("10_yvvvu")
+
+[node name="Bush6" type="Sprite2D" parent="Fun details"]
+position = Vector2(15274, 158)
+texture = ExtResource("11_go7kj")
+
+[node name="Shrooms14" type="Sprite2D" parent="Fun details"]
+position = Vector2(15744, 163)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms15" type="Sprite2D" parent="Fun details"]
+position = Vector2(16677, 338)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms16" type="Sprite2D" parent="Fun details"]
+position = Vector2(17329, 356)
+texture = ExtResource("10_yvvvu")
+
+[node name="Shrooms17" type="Sprite2D" parent="Fun details"]
+position = Vector2(18171, 288)
+texture = ExtResource("10_yvvvu")
+
+[node name="Sign" type="Sprite2D" parent="Fun details"]
+position = Vector2(7745, 213)
+texture = ExtResource("12_c2rox")
+
+[node name="Sign2" type="Sprite2D" parent="Fun details"]
+position = Vector2(9177, 354)
+texture = ExtResource("12_c2rox")
+
+[node name="Sign3" type="Sprite2D" parent="Fun details"]
+position = Vector2(10760, 291)
+texture = ExtResource("12_c2rox")
+
+[node name="Sign4" type="Sprite2D" parent="Fun details"]
+position = Vector2(13544, 240)
+texture = ExtResource("12_c2rox")
+
+[node name="Sign5" type="Sprite2D" parent="Fun details"]
+position = Vector2(15476, 160)
+texture = ExtResource("12_c2rox")
+
 [node name="Mobs" type="Node" parent="."]
+
+[node name="Frog" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(618, 311)
+
+[node name="Frog2" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(1837, 309)
+
+[node name="Eagle" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(2684, 222)
+
+[node name="Eagle2" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(4830, 321)
+
+[node name="Frog3" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(6026, 309)
+
+[node name="Eagle3" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(7352, 284)
+
+[node name="Eagle4" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(8934, 309)
+
+[node name="Frog4" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(9737, 324)
+
+[node name="Eagle5" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(10826, 290)
+
+[node name="Frog5" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(11559, 306)
+
+[node name="Frog6" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(12351, 372)
+
+[node name="Eagle6" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(14056, 259)
+
+[node name="Frog7" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(15122, 162)
+
+[node name="Frog8" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(16613, 339)
+
+[node name="Eagle7" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(17228, 338)
+
+[node name="Frog9" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(18131, 290)
+
+[node name="Eagle8" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(16084, 236)
+
+[node name="Frog10" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(14537, 263)
+
+[node name="Frog11" parent="Mobs" instance=ExtResource("10_ol54c")]
+position = Vector2(13223, 247)
+
+[node name="Eagle9" parent="Mobs" instance=ExtResource("11_2kulw")]
+position = Vector2(6829, 242)
+
+[node name="collectables" type="Node" parent="."]
+
+[node name="Cherry4" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(10185, 262)
+
+[node name="Diamond" parent="collectables" instance=ExtResource("13_fxmap")]
+position = Vector2(7808, 163)
+
+[node name="Cherry" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(1299, 278)
+
+[node name="Cherry2" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(3160, 315)
+
+[node name="Cherry3" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(6411, 253)
+
+[node name="Cherry5" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(13624, 189)
+
+[node name="Diamond2" parent="collectables" instance=ExtResource("13_fxmap")]
+position = Vector2(15539, 97)
+
+[node name="Cherry6" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(18449, 227)
+
+[node name="Cherry7" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(18843, 228)
+
+[node name="Cherry8" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(19267, 230)
+
+[node name="Cherry9" parent="collectables" instance=ExtResource("12_k1jr7")]
+position = Vector2(4090, 264)
