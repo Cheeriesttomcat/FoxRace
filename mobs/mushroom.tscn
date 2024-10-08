@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://byxurxnx64orh"]
+[gd_scene load_steps=23 format=3 uid="uid://byxurxnx64orh"]
 
+[ext_resource type="Script" path="res://mobs/mushroom.gd" id="1_lfkqe"]
 [ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_rnvsa"]
 [ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_wvvi4"]
 [ext_resource type="Texture2D" uid="uid://6a63ydlsn8g5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png" id="3_qinee"]
@@ -89,6 +90,7 @@ size = Vector2(18, 9)
 size = Vector2(22, 18)
 
 [node name="Mushroom" type="CharacterBody2D"]
+script = ExtResource("1_lfkqe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0kj5y")
