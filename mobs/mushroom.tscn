@@ -1,0 +1,114 @@
+[gd_scene load_steps=22 format=3 uid="uid://byxurxnx64orh"]
+
+[ext_resource type="Texture2D" uid="uid://cv2u8fhjpjlce" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_rnvsa"]
+[ext_resource type="Texture2D" uid="uid://ernxyxe6qdq4" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png" id="2_wvvi4"]
+[ext_resource type="Texture2D" uid="uid://6a63ydlsn8g5" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png" id="3_qinee"]
+[ext_resource type="Texture2D" uid="uid://dgpxfp2v5rse" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-4.png" id="4_7emjk"]
+[ext_resource type="Texture2D" uid="uid://b5eld7dw2buwo" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-5.png" id="5_fdm1n"]
+[ext_resource type="Texture2D" uid="uid://dyf0q8viopqcl" path="res://collection/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-6.png" id="6_yldnm"]
+[ext_resource type="Texture2D" uid="uid://cqmn0ltok3lw5" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0000_Layer-1.png" id="7_enu1s"]
+[ext_resource type="Texture2D" uid="uid://cy3cgryu13mnx" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0001_Layer-2.png" id="8_mhlka"]
+[ext_resource type="Texture2D" uid="uid://cfr2fc4sxlahm" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0002_Layer-3.png" id="9_pfyn0"]
+[ext_resource type="Texture2D" uid="uid://cihm1oc8o2b1r" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0003_Layer-4.png" id="10_w5sv3"]
+[ext_resource type="Texture2D" uid="uid://dkpg0oew3fae3" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0004_Layer-5.png" id="11_m0ncg"]
+[ext_resource type="Texture2D" uid="uid://ddxg340t45yi" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0005_Layer-6.png" id="12_jxqnl"]
+[ext_resource type="Texture2D" uid="uid://bwbecc0641nvq" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0006_Layer-7.png" id="13_rfe8j"]
+[ext_resource type="Texture2D" uid="uid://bj45bur27arn0" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0007_Layer-8.png" id="14_8xfei"]
+[ext_resource type="Texture2D" uid="uid://l68m8oo8sgql" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0008_Layer-9.png" id="15_q547o"]
+[ext_resource type="Texture2D" uid="uid://d0wg2cllxhj24" path="res://collection/Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/walking/0__0009_Layer-10.png" id="16_13v6e"]
+[ext_resource type="AudioStream" uid="uid://cp30wcgkyae24" path="res://sfx/water-drip-45622.mp3" id="17_7k7t4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0kj5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rnvsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wvvi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qinee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7emjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fdm1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yldnm")
+}],
+"loop": false,
+"name": &"death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_enu1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhlka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pfyn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w5sv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m0ncg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jxqnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rfe8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8xfei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q547o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_13v6e")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx37k"]
+size = Vector2(9, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30crb"]
+size = Vector2(18, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjgd0"]
+size = Vector2(22, 18)
+
+[node name="Mushroom" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0kj5y")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_yx37k")
+
+[node name="Squish" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Squish"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_30crb")
+
+[node name="owie" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="owie"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pjgd0")
+
+[node name="owsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_7k7t4")
