@@ -46,19 +46,10 @@ func _physics_process(delta):
 	if get_node("AnimatedSprite2D").animation != "death":
 		move_and_slide()
 		
-#This is the character detection
-func _on_player_detection_body_entered(body):
-	if body.name == "Player":
-		chase = true
-		
-func _on_player_detection_body_exited(body):
-	if body.name == "Player":
-		chase = false
-		#print("Can exit")
-	#print("This functions")
+
 		
 
-#Kill a possum
+#Kill a mushie
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		body.velocity.y = BOUNCE
