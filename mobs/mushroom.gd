@@ -15,7 +15,7 @@ var player
 #This implements gravity for mushroom
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #Set mushroom speed
-const SPEED = 150
+const SPEED = 100
 #Bounce off of possum
 const BOUNCE = -400
 #Point values
@@ -30,6 +30,7 @@ func _ready():
 	get_node("AnimatedSprite2D").play("walk")
 	
 func _physics_process(delta):
+	player = get_node("../../Player/Player")
 	#This does the fall speed
 	velocity.y += gravity * delta
 	#Walk that mushroom
