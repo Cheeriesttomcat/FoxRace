@@ -617,6 +617,9 @@ position = Vector2(581, 1344)
 [node name="Mushroom7" parent="Mobs" instance=ExtResource("9_hxypa")]
 position = Vector2(339, 1409)
 
+[node name="Mushroom8" parent="Mobs" instance=ExtResource("9_hxypa")]
+position = Vector2(223, 3813)
+
 [node name="Collectables" type="Node" parent="."]
 
 [node name="Diamond" parent="Collectables" instance=ExtResource("11_q0a32")]

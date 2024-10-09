@@ -89,7 +89,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx37k"]
-size = Vector2(18, 17.5)
+size = Vector2(14, 17.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30crb"]
 size = Vector2(20, 11)
@@ -106,22 +106,19 @@ script = ExtResource("1_lfkqe")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0kj5y")
 animation = &"walk"
-frame_progress = 0.344516
+frame_progress = 0.281947
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 0.75)
+position = Vector2(1, 0.75)
 shape = SubResource("RectangleShape2D_yx37k")
 
 [node name="Squish" type="Area2D" parent="."]
-visible = false
 
 [node name="flat" type="CollisionShape2D" parent="Squish"]
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_30crb")
 
 [node name="owie" type="Area2D" parent="."]
-visible = false
 
 [node name="sadfox" type="CollisionShape2D" parent="owie"]
 position = Vector2(0, 2)
