@@ -146,6 +146,7 @@ shape = SubResource("RectangleShape2D_2agc5")
 position = Vector2(1, -12)
 sprite_frames = SubResource("SpriteFrames_8q15f")
 animation = &"idle"
+frame_progress = 0.564914
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 visible = false

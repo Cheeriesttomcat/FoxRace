@@ -24,30 +24,34 @@ const POINTS = 5
 const LOSS = 3
 #Direction of movement
 var direction = -1
+#This is the chase variable
+var chase = false
 
 #reset idle
 func _ready():
-	get_node("AnimatedSprite2D").play("walk")
+	get_node("AnimatedSprite2D").play("idle")
 	
 func _physics_process(delta):
 	player = get_node("../../Player/Player")
 	#This does the fall speed
 	velocity.y += gravity * delta
-	#Walk that mushroom
-	if get_node("AnimatedSprite2D").animation != "death":
-		get_node("AnimatedSprite2D").play("walk")
-		if self.is_on_wall():
-			if direction == 1:
-				direction = -1
-			else:
-				direction = 1
-		if direction == 1:
-			get_node("AnimatedSprite2D").flip_h = false
-		else:
-			get_node("AnimatedSprite2D").flip_h = true
-		velocity.x = SPEED * direction
+	#Walk that mushroom if it's on
+	if direction == 1:
+		get_node("AnimatedSprite2D").flip_h = false
 	else:
-		velocity.x = 0
+		get_node("AnimatedSprite2D").flip_h = true
+	if chase == true:
+		if get_node("AnimatedSprite2D").animation != "death":
+			get_node("AnimatedSprite2D").play("walk")
+			if self.is_on_wall():
+				if direction == 1:
+					direction = -1
+				else:
+					direction = 1
+
+			velocity.x = SPEED * direction
+		else:
+			velocity.x = 0
 	#This makes the gravity n stuff work
 	if get_node("AnimatedSprite2D").animation != "death":
 		move_and_slide()
@@ -84,3 +88,16 @@ func death():
 		get_node("AnimatedSprite2D").play("death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
+
+
+func _on_hatin_body_entered(body):
+	if body.name == "Player":
+		if chase == false:
+			direction = player.position.x - self.position.x
+			if direction > 0:
+				get_node("AnimatedSprite2D").flip_h = false
+				direction = 1
+			else:
+				get_node("AnimatedSprite2D").flip_h = true
+				direction = -1
+			chase = true

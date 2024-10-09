@@ -78,9 +78,7 @@ shape = SubResource("RectangleShape2D_0ienb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_uk8iv")
-animation = &"death"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.137338
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
