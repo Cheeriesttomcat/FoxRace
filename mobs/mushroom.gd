@@ -4,7 +4,7 @@
 #
 #	Author CheeriestTomcat
 #	Created 10/8/24
-#   Last Modified 10/8/24
+#   Last Modified 10/9/24
 #
 #
 #**************************************************************************************
@@ -15,7 +15,7 @@ var player
 #This implements gravity for mushroom
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #Set mushroom speed
-const SPEED = 300
+const SPEED = 150
 #Bounce off of possum
 const BOUNCE = -400
 #Point values
@@ -23,11 +23,11 @@ const POINTS = 5
 #Damage Done
 const LOSS = 3
 #Direction of movement
-var direction = 1
+var direction = -1
 
 #reset idle
 func _ready():
-	get_node("AnimatedSprite2D").play("idle")
+	get_node("AnimatedSprite2D").play("walk")
 	
 func _physics_process(delta):
 	#This does the fall speed
@@ -35,6 +35,11 @@ func _physics_process(delta):
 	#Walk that mushroom
 	if get_node("AnimatedSprite2D").animation != "death":
 		get_node("AnimatedSprite2D").play("walk")
+		if self.is_on_wall():
+			if direction == 1:
+				direction = -1
+			else:
+				direction = 1
 		if direction == 1:
 			get_node("AnimatedSprite2D").flip_h = false
 		else:
@@ -50,14 +55,14 @@ func _physics_process(delta):
 		
 
 #Kill a mushie
-func _on_player_death_body_entered(body):
+func _on_squish_body_entered(body):
 	if body.name == "Player":
 		body.velocity.y = BOUNCE
 		Game.Gold += POINTS
 		death()
 
 #Hurt the player
-func _on_player_collision_body_entered(body):
+func _on_owie_body_entered(body):
 	if body.name == "Player":
 		if get_node("AnimatedSprite2D").animation != "death" and (body.get_node("AnimatedSprite2D").animation != "hurt") and body.pain != true:
 			Game.PlayerHp -= LOSS

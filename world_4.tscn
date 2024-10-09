@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dliiwnfktkv0l"]
+[gd_scene load_steps=14 format=3 uid="uid://dliiwnfktkv0l"]
 
 [ext_resource type="Texture2D" uid="uid://csny3ad0rhh5o" path="res://collection/Sunny Land Collection Files/Assets/Environments/Day-Platformer/PNG/sky.png" id="1_rhdg7"]
 [ext_resource type="Script" path="res://Cloud layer.gd" id="2_3pd26"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c1i0ghokrc07g" path="res://player/player.tscn" id="5_rqhai"]
 [ext_resource type="AudioStream" uid="uid://bwrvyo4s7rf2c" path="res://music2/SunnyLand Music/Adventure pack 1 ogg/chibi-robot-b.ogg" id="7_jxe14"]
 [ext_resource type="Script" path="res://Camera2D2.gd" id="8_fxoqa"]
+[ext_resource type="PackedScene" uid="uid://byxurxnx64orh" path="res://mobs/mushroom.tscn" id="9_hxypa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sviwr"]
 texture = ExtResource("4_8ivuc")
@@ -793,6 +794,9 @@ limit_right = 1007
 script = ExtResource("8_fxoqa")
 
 [node name="Mobs" type="Node" parent="."]
+
+[node name="Mushroom" parent="Mobs" instance=ExtResource("9_hxypa")]
+position = Vector2(192, 274)
 
 [node name="Collectables" type="Node" parent="."]
 
