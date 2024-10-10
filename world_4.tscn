@@ -626,6 +626,9 @@ position = Vector2(606, 4256)
 [node name="Mushroom10" parent="Mobs" instance=ExtResource("9_hxypa")]
 position = Vector2(816, 3872)
 
+[node name="Mushroom11" parent="Mobs" instance=ExtResource("9_hxypa")]
+position = Vector2(493, 4384)
+
 [node name="Collectables" type="Node" parent="."]
 
 [node name="Diamond" parent="Collectables" instance=ExtResource("11_q0a32")]
@@ -662,6 +665,3 @@ position = Vector2(396, 3462)
 position = Vector2(414, 4001)
 
 [node name="Fun details" type="Node" parent="."]
-
-[node name="Mushroom" parent="." instance=ExtResource("9_hxypa")]
-position = Vector2(493, 4384)
